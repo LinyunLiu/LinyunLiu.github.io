@@ -1,5 +1,5 @@
 body{
-    /*background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("src/DSC0E0464.jpg");*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("src/DSC0E0464.jpg");
     background-color: #161617;
     background-repeat: repeat;
     background-attachment: fixed;
@@ -27,15 +27,60 @@ div.main{
     flex: 1;
 }
 p.title{
-    font-size: 42px;
+    font-size: 60px;
     margin-bottom: 20px;
     margin-top: 100px;
     text-align: center;
     font-weight: bold;
-    background: linear-gradient(to right, #ee2525, #abd209);
+    background: linear-gradient(to right, #ee2525, #fffb00);
     -webkit-background-clip: text; /* For Safari */
     -webkit-text-fill-color: transparent; /* For Safari */
     background-clip: text;
+}
+/*********End*********/
+
+
+/*Extra Contents*/
+div.extra{
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 60px;
+    flex: 1;
+}
+p.more-about-me{
+    margin-left:10px;
+}
+div.rows-1{
+    background: linear-gradient(to right, #46a809, yellow);
+    border-radius: 8px;
+    margin: 5px;
+
+}
+div.rows-2{
+    display: flex;
+    flex-direction: row;
+    margin-top: -15px;
+}
+div.rows-2 div{
+    background: linear-gradient(to bottom, #46a809, #fffb00);
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+    transition: transform 0.4s ease-in-out;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+}
+div.rows-2 div img{
+    width: 70%;
+    height: 70%;
+    margin: 0;
+    transform: none;
+}
+div.rows-2 div:hover{
+    transform: translateY(-10%);
 }
 /*********End*********/
 
@@ -63,15 +108,16 @@ div.top-navi a {
 }
 
 div.top-navi a:hover {
-    border-radius: 8px;
-    color: #c0c0c0;
+    border-radius: 4px;
+    color: #fa9c24;
 }
 
-/*div.top-navi a.active {*/
-/*    background-color: #cc2e54;*/
-/*    color: white;*/
-/*    */
-/*}*/
+div.top-navi a.active {
+    background-color: #fa9c24;
+    border-radius: 4px;
+    color: white;
+
+}
 /*********End*********/
 
 
@@ -87,7 +133,7 @@ hr.line{
     height: 1px;
     background-color: white;
     border: none;
-    margin: 0;
+    margin: 20px 0 5px;
 
 }
 div.foot-notes-contents{
@@ -95,13 +141,13 @@ div.foot-notes-contents{
     width: 100%;
 }
 div.foot-notes-contents img{
-    margin: 0 5px 0 0;
+    margin: 0 3px 0 0;
 }
 p.foot-note-name{
     font-family: "Avenir",serif;
     font-size: 14px;
     color: white;
-    margin-top: -30px;
+    margin-top: -35px;
     padding: 0;
     text-align: right;
 }
@@ -149,22 +195,22 @@ textarea::-webkit-scrollbar{
 img.strawberry-1{
     overflow: auto;
     border-radius: 8px;
-    width: 30%;
+    width: 35%;
     height: 100%;
     margin-left: 40px;
     margin-bottom: 100px;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 1s ease-in-out;
 }
 img.strawberry-1:hover{
-    transform: scale(1.04);
+    transform: rotateZ(360deg);
 }
 img{
     overflow: auto;
     border-radius: 8px;
-    width: 2%;
-    height: 2%;
+    width: 2.5%;
+    height: 2.5%;
     transition: transform 0.2s ease-in-out;
 }
 img:hover{
-    transform: scale(1.2);
+    transform: scale(1.5);
 }
