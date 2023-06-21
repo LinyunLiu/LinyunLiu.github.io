@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url("wallpaper/comp-4.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url("wallpaper/art-1.jpg");
     background-color: #161617;
     background-repeat: repeat;
     background-attachment: fixed;
@@ -32,7 +32,7 @@ p.title{
     margin-top: 100px;
     text-align: center;
     font-weight: bold;
-    background: linear-gradient(to right, #ff2f92, #ffffff);
+    background: linear-gradient(to right, #00fdff, #ffffff);
     -webkit-background-clip: text; /* For Safari */
     -webkit-text-fill-color: transparent; /* For Safari */
     background-clip: text;
@@ -64,17 +64,16 @@ div.top-navi a {
 
 div.top-navi a:hover {
     border-radius: 4px;
-    color: #ff8ad8;
+    color: #76d6ff;
 }
 
 div.top-navi a.active {
-    background-color: #ff8ad8;
+    background-color: #76d6ff;
     border-radius: 4px;
     color: white;
 
 }
 /*********End*********/
-
 
 
 /*End Foot Notes Style*/

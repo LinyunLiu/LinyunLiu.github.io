@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("src/DSC0E0464.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("wallpaper/home-2.jpg");
     background-color: #161617;
     background-repeat: repeat;
     background-attachment: fixed;
@@ -32,7 +32,7 @@ p.title{
     margin-top: 100px;
     text-align: center;
     font-weight: bold;
-    background: linear-gradient(to right, #ee2525, #fffb00);
+    background: linear-gradient(to right, #ff2600, #ffffff);
     -webkit-background-clip: text; /* For Safari */
     -webkit-text-fill-color: transparent; /* For Safari */
     background-clip: text;
@@ -51,7 +51,7 @@ p.more-about-me{
     margin-left:10px;
 }
 div.rows-1{
-    background: linear-gradient(to right, #46a809, yellow);
+    background: linear-gradient(to right, #ff7e79, yellow);
     border-radius: 8px;
     margin: 5px;
 
@@ -62,16 +62,22 @@ div.rows-2{
     margin-top: -15px;
 }
 div.rows-2 div{
-    background: linear-gradient(to bottom, #46a809, #fffb00);
+    background: linear-gradient(to top, #ff7e79, #fffb00);
     width: 100%;
     height: 100%;
     margin: 5px;
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.2s ease-in-out;
     border-radius: 8px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid white;
+    /*border: 1px solid white;*/
+}
+div.rows-2 p{
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 0;
 }
 div.rows-2 div img{
     width: 70%;
@@ -80,7 +86,8 @@ div.rows-2 div img{
     transform: none;
 }
 div.rows-2 div:hover{
-    transform: translateY(-10%);
+    transform: translateY(-6%);
+    cursor: pointer;
 }
 /*********End*********/
 
@@ -109,11 +116,11 @@ div.top-navi a {
 
 div.top-navi a:hover {
     border-radius: 4px;
-    color: #fa9c24;
+    color: #ff7e79;
 }
 
 div.top-navi a.active {
-    background-color: #fa9c24;
+    background-color: #ff7e79;
     border-radius: 4px;
     color: white;
 
@@ -178,7 +185,7 @@ button:hover{
 }
 textarea{
     font-family: "Avenir",serif;
-    font-size: 18px;
+    font-size: 20px;
     color: white;
     outline: none;
     height: 500px;

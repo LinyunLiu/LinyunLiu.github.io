@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url("wallpaper/comp-4.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("wallpaper/film-1.jpg");
     background-color: #161617;
     background-repeat: repeat;
     background-attachment: fixed;
@@ -25,6 +25,7 @@ div.main{
     margin-left: 60px;
     margin-right: 60px;
     flex: 1;
+    width: 100%;
 }
 p.title{
     font-size: 60px;
@@ -32,7 +33,7 @@ p.title{
     margin-top: 100px;
     text-align: center;
     font-weight: bold;
-    background: linear-gradient(to right, #ff2f92, #ffffff);
+    background: linear-gradient(to right, #00f900, #ffffff);
     -webkit-background-clip: text; /* For Safari */
     -webkit-text-fill-color: transparent; /* For Safari */
     background-clip: text;
@@ -64,17 +65,35 @@ div.top-navi a {
 
 div.top-navi a:hover {
     border-radius: 4px;
-    color: #ff8ad8;
+    color: #73fa79;
 }
 
 div.top-navi a.active {
-    background-color: #ff8ad8;
+    background-color: #73fa79;
     border-radius: 4px;
     color: white;
 
 }
 /*********End*********/
 
+
+/*Main Area Video and Other Style*/
+iframe{
+    border-radius: 8px;
+    width: 45%;
+    height: 315px;
+    border: 1px solid #73fa79;
+}
+div.video-1{
+    display:flex;
+    flex-direction: row;
+}
+div.video-1 p{
+    margin-left: 25px;
+    margin-top: 0;
+}
+
+/*********End*********/
 
 
 /*End Foot Notes Style*/
