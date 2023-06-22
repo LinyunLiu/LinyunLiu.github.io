@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("wallpaper/film-1.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url("wallpaper/film-1.jpg");
     background-color: #161617;
     background-repeat: repeat;
     background-attachment: fixed;
@@ -22,10 +22,7 @@ div.all{
 
 /*Middle Content Style*/
 div.main{
-    margin-left: 60px;
-    margin-right: 60px;
     flex: 1;
-    width: 100%;
 }
 p.title{
     font-size: 60px;
@@ -37,6 +34,13 @@ p.title{
     -webkit-background-clip: text; /* For Safari */
     -webkit-text-fill-color: transparent; /* For Safari */
     background-clip: text;
+}
+div.title-bg{
+    background-color: #00000070;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-bottom: 100px;
+    border-radius: 20px;
 }
 /*********End*********/
 
@@ -79,20 +83,49 @@ div.top-navi a.active {
 
 /*Main Area Video and Other Style*/
 iframe{
-    border-radius: 8px;
-    width: 45%;
-    height: 315px;
-    border: 1px solid #73fa79;
-}
-div.video-1{
-    display:flex;
-    flex-direction: row;
+    border-radius: 20px;
+    width: 80%;
+    height: 600px;
+    margin: -30px 150px 100px;
+    border: 2px solid transparent;
+
 }
 div.video-1 p{
-    margin-left: 25px;
-    margin-top: 0;
+    margin-left: 150px;
+    font-size: 40px;
+    font-weight: bold;
+    background: linear-gradient(to right, #00f900, #ffffff);
+    -webkit-background-clip: text; /* For Safari */
+    -webkit-text-fill-color: transparent; /* For Safari */
+    background-clip: text;
 }
-
+div.video-2 p{
+    margin-left: 150px;
+    font-size: 40px;
+    font-weight: bold;
+    background: linear-gradient(to right, #ff9300, #ffffff);
+    -webkit-background-clip: text; /* For Safari */
+    -webkit-text-fill-color: transparent; /* For Safari */
+    background-clip: text;
+}
+div.video-3 p{
+    margin-left: 150px;
+    font-size: 40px;
+    font-weight: bold;
+    background: linear-gradient(to right, #0096ff, #ffffff);
+    -webkit-background-clip: text; /* For Safari */
+    -webkit-text-fill-color: transparent; /* For Safari */
+    background-clip: text;
+}
+div.video-4 p{
+    margin-left: 150px;
+    font-size: 40px;
+    font-weight: bold;
+    background: linear-gradient(to right, #ff2f92, #ffffff);
+    -webkit-background-clip: text; /* For Safari */
+    -webkit-text-fill-color: transparent; /* For Safari */
+    background-clip: text;
+}
 /*********End*********/
 
 
@@ -124,18 +157,6 @@ p.foot-note-name{
 }
 /*********End*********/
 
-img.strawberry-1{
-    overflow: auto;
-    border-radius: 8px;
-    width: 35%;
-    height: 100%;
-    margin-left: 40px;
-    margin-bottom: 100px;
-    transition: transform 1s ease-in-out;
-}
-img.strawberry-1:hover{
-    transform: rotateZ(360deg);
-}
 img{
     overflow: auto;
     border-radius: 8px;

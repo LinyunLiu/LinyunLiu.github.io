@@ -210,19 +210,6 @@ p.foot-note-name{
     text-align: right;
 }
 /*********End*********/
-
-img.strawberry-1{
-    overflow: auto;
-    border-radius: 8px;
-    width: 35%;
-    height: 100%;
-    margin-left: 40px;
-    margin-bottom: 100px;
-    transition: transform 1s ease-in-out;
-}
-img.strawberry-1:hover{
-    transform: rotateZ(360deg);
-}
 img{
     overflow: auto;
     border-radius: 8px;

@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url("wallpaper/art-1.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url("wallpaper/art-1.jpg");
     background-color: #161617;
     background-repeat: repeat;
     background-attachment: fixed;
@@ -15,9 +15,8 @@ div.all{
     flex-direction: column;
     margin-left: -8px;
     margin-top: -8px;
-    padding: 0;
-    height: auto;
-    width: auto;
+    height: 100%;
+    width: 100%;
 }
 
 /*Middle Content Style*/
@@ -36,6 +35,13 @@ p.title{
     -webkit-background-clip: text; /* For Safari */
     -webkit-text-fill-color: transparent; /* For Safari */
     background-clip: text;
+}
+div.title-bg{
+    background-color: #00000070;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 100px;
+    border-radius: 20px;
 }
 /*********End*********/
 
@@ -103,26 +109,107 @@ p.foot-note-name{
     text-align: right;
 }
 /*********End*********/
-
-img.strawberry-1{
-    overflow: auto;
-    border-radius: 8px;
-    width: 35%;
-    height: 100%;
-    margin-left: 40px;
-    margin-bottom: 100px;
-    transition: transform 1s ease-in-out;
+div.gallery{
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    flex: 1;
+    width: 100%;
 }
-img.strawberry-1:hover{
-    transform: rotateZ(360deg);
+div.sub1{
+    height: 900px;
+    width: 100%;
+    background-color: #00000000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 60px;
+    align-items: center;
+    justify-content: center;
+}
+p.count{
+    font-size: 36px;
+    color: #76d6ff;
+    margin: 5px;
+    flex:1;
+    font-weight: bold;
 }
 img{
-    overflow: auto;
-    border-radius: 8px;
-    width: 2.5%;
-    height: 2.5%;
-    transition: transform 0.2s ease-in-out;
+    width: 95%;
+    height:80%;
+    border: 2px solid #76d6ff;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    flex: 1;
+    margin: -75px 0 0;
 }
 img:hover{
-    transform: scale(1.5);
+    transform: scale(1.01);
+}
+div.btns{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+div.sub2{
+    height: 900px;
+    width: 100%;
+    background-color: #00000000;
+    border-radius: 10px;
+    display: flex;
+    flex: 1;
+    margin-left: 20px;
+    margin-right: 60px;
+    align-items: center;
+    justify-content: center;
+
+}
+button.back{
+    width: 30%;
+    height: 50px;
+    border: 2px solid #3b6c8290;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 18px;
+    background-color: #3b6c8290;
+    font-family: "Avenir", serif;
+    color: #76d6ff;
+    transition: background-color 0.3s ease;
+    margin-right: 5px;
+}
+button.next{
+    width: 70%;
+    height: 50px;
+    border: 2px solid #3b6c8290;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 18px;
+    background-color: #3b6c8290;
+    font-family: "Avenir", serif;
+    color: #76d6ff;
+    transition: background-color 0.3s ease;
+}
+button:hover{
+    background-color: #76d6ff;
+    color: black;
+}
+textarea{
+    font-family: "Avenir",serif;
+    font-size: 24px;
+    color: #76d6ff;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid transparent;
+    resize: none;
+    overflow: auto;
+    border-radius: 20px;
+    height: 780px;
+    width: 600px;
+}
+textarea::-webkit-scrollbar{
+    display: none;
 }
