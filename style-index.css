@@ -37,6 +37,13 @@ p.title{
     -webkit-text-fill-color: transparent; /* For Safari */
     background-clip: text;
 }
+div.title-bg{
+    background-color: #ffffff50;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 100px;
+    border-radius: 20px;
+}
 /*********End*********/
 
 

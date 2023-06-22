@@ -1,3 +1,4 @@
+// These are function for index.html
 function toCompPage(){
     window.open("computing.html");
 }
@@ -16,3 +17,5 @@ function toPhotoPage(){
 function toBlogPage(){
     window.open("blogs.html");
 }
+
+// These are function for computing.html
