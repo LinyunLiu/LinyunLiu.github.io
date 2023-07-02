@@ -206,7 +206,6 @@ textarea{
     border: 1px solid transparent;
     resize: none;
     overflow: auto;
-    border-radius: 20px;
     height: 780px;
     width: 600px;
 }
