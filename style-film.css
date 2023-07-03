@@ -1,12 +1,12 @@
 body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url("wallpaper/film-1.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("wallpaper/film-1.webp");
     background-color: #161617;
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: cover;
     font-size: 24px;
     font-family: "Avenir", serif;
-    color: white;
+    color: #deffda;
     height: 100%;
     width: 100%;
 }
@@ -23,10 +23,15 @@ div.all{
 /*Middle Content Style*/
 div.main{
     flex: 1;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 60px;
 }
 p.title{
-    font-size: 60px;
-    margin-bottom: 20px;
+    font-size: 70px;
+    font-family: "Snell Roundhand", cursive;
+    margin-bottom: 100px;
     margin-top: 100px;
     text-align: center;
     font-weight: bold;
@@ -36,11 +41,7 @@ p.title{
     background-clip: text;
 }
 div.title-bg{
-    background-color: #00000070;
-    margin-left: 500px;
-    margin-right: 500px;
-    margin-bottom: 100px;
-    border-radius: 20px;
+    background-color: #00000000;
 }
 /*********End*********/
 
@@ -58,7 +59,7 @@ div.top-navi {
 
 div.top-navi a {
     /*float: left;*/
-    color: white;
+    color: #deffda;
     text-align: center;
     padding: 5px;
     text-decoration: none;
@@ -85,43 +86,55 @@ div.top-navi a.active {
 iframe{
     border-radius: 20px;
     width: 80%;
-    height: 600px;
-    margin: -30px 150px 100px;
+    max-height: 450px;
+    min-height: 450px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20px;
     border: 2px solid transparent;
+    box-shadow: 0 0 1rem 0 rgba(0, 144, 81, 0.5);
 
 }
 div.video-1 p{
-    margin-left: 150px;
-    font-size: 40px;
+    margin-left: 11%;
+    margin-bottom: 2px;
+    font-size: 25px;
     font-weight: bold;
-    background: linear-gradient(to right, #00f900, #ffffff);
+    font-style: italic;
+    background: linear-gradient(to right, #73fa79, #ffffff);
     -webkit-background-clip: text; /* For Safari */
     -webkit-text-fill-color: transparent; /* For Safari */
     background-clip: text;
 }
 div.video-2 p{
-    margin-left: 150px;
-    font-size: 40px;
+    margin-left: 11%;
+    margin-bottom: 2px;
+    font-size: 25px;
     font-weight: bold;
-    background: linear-gradient(to right, #ff9300, #ffffff);
+    font-style: italic;
+    background: linear-gradient(to right, #73fa79, #ffffff);
     -webkit-background-clip: text; /* For Safari */
     -webkit-text-fill-color: transparent; /* For Safari */
     background-clip: text;
 }
 div.video-3 p{
-    margin-left: 150px;
-    font-size: 40px;
+    margin-left: 11%;
+    margin-bottom: 2px;
+    font-size: 25px;
     font-weight: bold;
-    background: linear-gradient(to right, #0096ff, #ffffff);
+    font-style: italic;
+    background: linear-gradient(to right, #73fa79, #ffffff);
     -webkit-background-clip: text; /* For Safari */
     -webkit-text-fill-color: transparent; /* For Safari */
     background-clip: text;
 }
 div.video-4 p{
-    margin-left: 150px;
-    font-size: 40px;
+    margin-left: 11%;
+    margin-bottom: 2px;
+    font-size: 25px;
     font-weight: bold;
-    background: linear-gradient(to right, #ff2f92, #ffffff);
+    font-style: italic;
+    background: linear-gradient(to right, #73fa79, #ffffff);
     -webkit-background-clip: text; /* For Safari */
     -webkit-text-fill-color: transparent; /* For Safari */
     background-clip: text;
