@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("wallpaper/home-2.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("wallpaper/home-4.jpg");
     background-color: #161617;
     background-repeat: repeat;
     background-attachment: fixed;
@@ -22,27 +22,78 @@ div.all{
 
 /*Middle Content Style*/
 div.main{
-    margin-left: 60px;
+    margin-left: 150px;
     margin-right: 60px;
+    margin-top: 200px;
     flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
-p.title{
-    font-size: 60px;
-    margin-bottom: 20px;
-    margin-top: 100px;
-    text-align: center;
+@media screen and (max-width: 1200px) {
+    div.main {
+        margin-left: 150px;
+        margin-right: 60px;
+        display: flex;
+        flex-direction: column;
+    }
+    div.about-me{
+        margin: 150px 0 10px 0;
+    }
+    img.strawberry-1{
+        overflow: auto;
+        border-radius: 8px;
+        width: 400px;
+        height: 100%;
+        margin-top: 0;
+        transition: transform 2s ease-in-out;
+    }
+    img.strawberry-1:hover{
+        transform: rotateZ(360deg);
+    }
+}
+div.about-me{
+    margin: 0 100px 100px 0;
+}
+div.about-me p{
+    max-width: 700px; /* Adjust the maximum width as needed */
+    overflow: auto;
+}
+p.about-me-title{
+    font-size: 70px;
+    margin-bottom: 0;
+    margin-top: 0;
+    /*text-align: center;*/
     font-weight: bold;
-    background: linear-gradient(to right, #ff2600, #ffffff);
+    background: linear-gradient(to right, #ff7e79, #ffffff);
     -webkit-background-clip: text; /* For Safari */
     -webkit-text-fill-color: transparent; /* For Safari */
     background-clip: text;
 }
-div.title-bg{
-    background-color: #00000070;
-    margin-left: 300px;
-    margin-right: 300px;
-    margin-bottom: 100px;
-    border-radius: 20px;
+p.about-me-occupation{
+    font-size: 35px;
+    font-weight: bold;
+    margin: -10px 0 20px;
+    /*text-align: center;*/
+    -webkit-text-stroke: 1px #ff7e79; /* Adjust the stroke width and color as needed */
+    -webkit-text-fill-color: transparent;
+}
+p.about-me-details{
+    font-size: 20px;
+    margin: 0;
+    /*text-align: center;*/
+    color: antiquewhite;
+}
+img.strawberry-1 {
+    overflow: auto;
+    border-radius: 8px;
+    width: 400px;
+    height: 100%;
+    transition: transform 2s ease-in-out;
+}
+
+img.strawberry-1:hover {
+    transform: rotateZ(360deg);
 }
 /*********End*********/
 
@@ -58,10 +109,11 @@ p.more-about-me{
     margin-left:10px;
 }
 div.rows-1{
-    background: linear-gradient(to right, #ff7e79, yellow);
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
     border-radius: 8px;
     margin: 5px;
-
 }
 div.rows-2{
     display: flex;
@@ -69,7 +121,9 @@ div.rows-2{
     margin-top: -15px;
 }
 div.rows-2 div{
-    background: linear-gradient(to top, #ff7e79, #fffb00);
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
     width: 100%;
     height: 100%;
     margin: 5px;
@@ -79,7 +133,6 @@ div.rows-2 div{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*border: 1px solid white;*/
 }
 div.rows-2 p{
     font-size: 16px;
@@ -103,22 +156,18 @@ div.rows-2 div:hover{
 div.top-navi {
     background-color: #000000c8;
     margin: 0 0 0 0;
-    flex: 1;
     position: fixed;
     padding: 10px 0 0 60px;
     width: 100%;
     height: 50px;
 }
-
 div.top-navi a {
-    /*float: left;*/
     color: white;
     text-align: center;
     padding: 5px;
     text-decoration: none;
     font-size: 18px;
-    margin-right: 10px;
-    margin-left: 0;
+    margin: 5px;
 }
 
 div.top-navi a:hover {
@@ -140,6 +189,7 @@ div.top-navi a.active {
 div.foot-notes{
     margin-left: 60px;
     margin-right: 60px;
+    margin-bottom: 20px;
     flex: 1
 }
 hr.line{
@@ -155,7 +205,7 @@ div.foot-notes-contents{
     width: 100%;
 }
 div.foot-notes-contents img{
-    margin: 0 3px 0 0;
+    margin: 5px 3px 0 0;
 }
 p.foot-note-name{
     font-family: "Avenir",serif;
@@ -189,34 +239,6 @@ button{
 button:hover{
     background-color: antiquewhite;
     color: black;
-}
-textarea{
-    font-family: "Avenir",serif;
-    font-size: 20px;
-    color: white;
-    outline: none;
-    height: 500px;
-    width: 60%;
-    resize: none;
-    overflow: auto;
-    border: 1px solid transparent;
-    border-radius: 8px;
-    background-color: transparent;
-}
-textarea::-webkit-scrollbar{
-    display: none;
-}
-img.strawberry-1{
-    overflow: auto;
-    border-radius: 8px;
-    width: 35%;
-    height: 100%;
-    margin-left: 40px;
-    margin-bottom: 100px;
-    transition: transform 1s ease-in-out;
-}
-img.strawberry-1:hover{
-    transform: rotateZ(360deg);
 }
 img{
     overflow: auto;
