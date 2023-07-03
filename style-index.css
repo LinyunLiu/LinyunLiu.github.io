@@ -6,7 +6,7 @@ body{
     background-size: cover;
     font-size: 24px;
     font-family: "Avenir", serif;
-    color: white;
+    color: antiquewhite;
     height: 100%;
     width: 100%;
 }
@@ -65,7 +65,7 @@ p.about-me-title{
     margin-top: 0;
     /*text-align: center;*/
     font-weight: bold;
-    background: linear-gradient(to right, #ff7e79, #ffffff);
+    background: linear-gradient(to right, #ff7e79, antiquewhite);
     -webkit-background-clip: text; /* For Safari */
     -webkit-text-fill-color: transparent; /* For Safari */
     background-clip: text;
@@ -160,9 +160,10 @@ div.top-navi {
     padding: 10px 0 0 60px;
     width: 100%;
     height: 50px;
+    z-index: 9999;
 }
 div.top-navi a {
-    color: white;
+    color: antiquewhite;
     text-align: center;
     padding: 5px;
     text-decoration: none;
@@ -178,7 +179,7 @@ div.top-navi a:hover {
 div.top-navi a.active {
     background-color: #ff7e79;
     border-radius: 4px;
-    color: white;
+    color: antiquewhite;
 
 }
 /*********End*********/
