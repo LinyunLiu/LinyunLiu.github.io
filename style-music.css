@@ -1,12 +1,12 @@
 body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("wallpaper/music-1.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("wallpaper/music-1.jpg");
     background-color: #161617;
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: cover;
     font-size: 24px;
     font-family: "Avenir", serif;
-    color: white;
+    color: #fff3ba;
     height: 100%;
     width: 100%;
 }
@@ -27,7 +27,8 @@ div.main{
     flex: 1;
 }
 p.title{
-    font-size: 60px;
+    font-size: 70px;
+    font-family: "Snell Roundhand", cursive;
     margin-bottom: 20px;
     margin-top: 100px;
     text-align: center;
@@ -53,7 +54,7 @@ div.top-navi {
 
 div.top-navi a {
     /*float: left;*/
-    color: white;
+    color: #fff3ba;
     text-align: center;
     padding: 5px;
     text-decoration: none;
@@ -103,26 +104,3 @@ p.foot-note-name{
     text-align: right;
 }
 /*********End*********/
-
-img.strawberry-1{
-    overflow: auto;
-    border-radius: 8px;
-    width: 35%;
-    height: 100%;
-    margin-left: 40px;
-    margin-bottom: 100px;
-    transition: transform 1s ease-in-out;
-}
-img.strawberry-1:hover{
-    transform: rotateZ(360deg);
-}
-img{
-    overflow: auto;
-    border-radius: 8px;
-    width: 2.5%;
-    height: 2.5%;
-    transition: transform 0.2s ease-in-out;
-}
-img:hover{
-    transform: scale(1.5);
-}

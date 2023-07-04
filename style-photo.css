@@ -1,12 +1,12 @@
 body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("wallpaper/photo-2.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("wallpaper/photo-3.jpg");
     background-color: #161617;
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: cover;
     font-size: 24px;
     font-family: "Avenir", serif;
-    color: white;
+    color: #fedfa4;
     height: 100%;
     width: 100%;
 }
@@ -27,9 +27,10 @@ div.main{
     flex: 1;
 }
 p.title{
-    font-size: 60px;
+    font-size: 70px;
+    font-family: "Snell Roundhand", cursive;
     margin-bottom: 20px;
-    margin-top: 100px;
+    margin-top: 200px;
     text-align: center;
     font-weight: bold;
     background: linear-gradient(to right, #ff2600, #fffb00);
@@ -38,6 +39,73 @@ p.title{
     background-clip: text;
 }
 /*********End*********/
+
+/*Photo Gallery Design*/
+div.grid-container {
+    columns: 4 200px;
+    column-gap: 1.5rem;
+    width: 90%;
+    margin: 60px auto 0;
+    transition: all .25s ease-in-out;
+}
+
+div.grid-container div {
+    margin: 0 1.5rem 1.5rem 0;
+    display: inline-block;
+    width: 100%;
+    border: solid 2px #fedfa450;
+    padding: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
+    transition: all .25s ease-in-out;
+}
+div.grid-container div:hover {
+    border-color: coral;
+}
+div.grid-container div:hover img {
+    cursor: pointer;
+    filter: grayscale(0);
+}
+div.grid-container div img {
+    width: 100%;
+    filter: grayscale(100%) sepia(100%) hue-rotate(-10deg);
+    border-radius: 8px;
+    transition: all .25s ease-in-out;
+}
+div.grid-container div p {
+    margin: 5px 0;
+    padding: 0;
+    text-align: center;
+    font-style: italic;
+}
+
+div.highlight-window{
+    display: flex;
+    position: fixed;
+    z-index: 0;
+    background-color: #ffffff00;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin: 8% 20% 8% 10%;
+    opacity: 0;
+    overflow: auto;
+    max-width: 1100px;
+    max-height: 450px;
+    min-width: 80%;
+    min-height: 80%;
+    transition: all 0.6s ease-in-out;
+    border: solid 2px #fedfa450;
+}
+div.highlight-window img:hover{
+    cursor: pointer;
+}
+div.highlight-window img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
 
 
 /*Top Navigation Bar Style*/
@@ -49,11 +117,12 @@ div.top-navi {
     padding: 10px 0 0 60px;
     width: 100%;
     height: 50px;
+    z-index: 999;
 }
 
 div.top-navi a {
     /*float: left;*/
-    color: white;
+    color: #fedfa4;
     text-align: center;
     padding: 5px;
     text-decoration: none;
@@ -103,26 +172,3 @@ p.foot-note-name{
     text-align: right;
 }
 /*********End*********/
-
-img.strawberry-1{
-    overflow: auto;
-    border-radius: 8px;
-    width: 35%;
-    height: 100%;
-    margin-left: 40px;
-    margin-bottom: 100px;
-    transition: transform 1s ease-in-out;
-}
-img.strawberry-1:hover{
-    transform: rotateZ(360deg);
-}
-img{
-    overflow: auto;
-    border-radius: 8px;
-    width: 2.5%;
-    height: 2.5%;
-    transition: transform 0.2s ease-in-out;
-}
-img:hover{
-    transform: scale(1.5);
-}
