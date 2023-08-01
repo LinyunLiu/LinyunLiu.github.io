@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cake Animation</title>
+  <title>HAPPY BIRTHDAY</title>
   <style>
     *,
     *::before,
@@ -14,23 +14,43 @@
     body {
       background-color: #eac285;
     }
+    div.all{
+      display: flex;
+      flex-direction: column;
+    }
+    div.title{
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      background-color: #713e1600;
+      text-align: center;
+      margin-top: 50px;
+    }
+    p.happy_birthday{
+      font-family: "optima",serif;
+      font-size: 60px;
+      color: white;
+      font-weight: bold;
+    }
     .container {
       width: 400px;
       height: 400px;
-      background-color: #ffffff;
       position: absolute;
       transform: translate(-50%, -50%);
-      border-radius: 8px;
-      top: 50%;
+      top: 55%;
       left: 50%;
-      box-shadow: 0 20px 45px rgba(120, 76, 10, 0.25);
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(8px);
     }
     .cake {
       width: 100%;
       position: absolute;
       bottom: 60px;
-      border-top-left-radius: 8px;
-      border-top-right-radius: 8px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .cake:hover{
+      transform: scale(1.05);
     }
     .bottom-layer,
     .top-layer,
@@ -40,6 +60,7 @@
       position: relative;
       margin: auto;
       border-radius: 8px 8px 0 0;
+      box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
       background-repeat: repeat;
       background-size: 100% 100%, 60px 100px;
       background-position: 28px 0;
@@ -55,7 +76,6 @@
       transform: scale(0.85);
       top: 72px;
       animation: rise-1 2s forwards;
-      border-radius: 8px 8px 0 0;
     }
     @keyframes rise-1 {
       100% {
@@ -66,7 +86,10 @@
       transform: scale(0.7);
       top: 144px;
       animation: rise-2 2s 2s forwards;
-      border-radius: 8px 8px 0 0;
+    }
+    .bottom-layer{
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
     }
     @keyframes rise-2 {
       100% {
@@ -74,6 +97,7 @@
       }
     }
     .candle {
+      box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
       background: repeating-linear-gradient(
               45deg,
               #fd3018 0,
@@ -87,7 +111,7 @@
       margin: auto;
       left: 0;
       right: 0;
-      bottom: 0;
+      bottom: 10px;
       animation: rise-3 1s 4s forwards;
     }
     @keyframes rise-3 {
@@ -112,15 +136,21 @@
         transform: scale(1) rotate(45deg);
       }
     }
+
   </style>
 </head>
 <body>
-<div class="container">
-  <div class="cake">
-    <div class="candle"></div>
-    <div class="top-layer"></div>
-    <div class="middle-layer"></div>
-    <div class="bottom-layer"></div>
+<div class="all">
+  <div class="title">
+    <p class="happy_birthday">Happy Birthday Gabriela!</p>
+  </div>
+  <div class="container">
+    <div class="cake">
+      <div class="candle"></div>
+      <div class="top-layer"></div>
+      <div class="middle-layer"></div>
+      <div class="bottom-layer"></div>
+    </div>
   </div>
 </div>
 </body>
