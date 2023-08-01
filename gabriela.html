@@ -25,6 +25,7 @@
       background-color: #713e1600;
       text-align: center;
       margin-top: 50px;
+      z-index: 999;
     }
     p.happy_birthday{
       font-family: "optima",serif;
@@ -138,20 +139,37 @@
         transform: scale(1) rotate(45deg);
       }
     }
+    video.video{
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+    }
   </style>
   <script>
+    const audio = new Audio("happy-birthday.mp3");
+    audio.load();
+    audio.loop = true;
     function play(){
-      const audio = new Audio("happy-birthday.mp3");
-      audio.play();
+      if (audio.paused){
+        audio.play();
+      }
+      else{
+        audio.pause()
+      }
     }
   </script>
 </head>
-<body>
+<body onclick="play()">
+  <video autoplay muted loop id="video" class="video">
+    <source src="happy-birthday.mov" type="video/mp4">
+  </video>
   <div class="all">
     <div class="title">
       <p class="happy_birthday">Happy Birthday Gabriela!</p>
     </div>
-    <div class="container" onclick="play()">
+    <div class="container">
       <div class="cake">
         <div class="candle"></div>
         <div class="top-layer"></div>
