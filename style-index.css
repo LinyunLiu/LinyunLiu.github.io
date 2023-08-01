@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("wallpaper/home-4.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("wallpaper/home-4.jpg");
     background-color: #161617;
     background-repeat: repeat;
     background-attachment: fixed;
