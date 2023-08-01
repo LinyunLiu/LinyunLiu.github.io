@@ -139,21 +139,26 @@
       }
     }
   </style>
+  <script>
+    function play(){
+      const audio = new Audio("happy-birthday.mp3");
+      audio.play();
+    }
+  </script>
 </head>
 <body>
-<embed src="happy-birthday.mp3" loop="true" autostart="true" width="2" height="0">
-<div class="all">
-  <div class="title">
-    <p class="happy_birthday">Happy Birthday Gabriela!</p>
-  </div>
-  <div class="container">
-    <div class="cake">
-      <div class="candle"></div>
-      <div class="top-layer"></div>
-      <div class="middle-layer"></div>
-      <div class="bottom-layer"></div>
+  <div class="all">
+    <div class="title">
+      <p class="happy_birthday">Happy Birthday Gabriela!</p>
+    </div>
+    <div class="container" onclick="play()">
+      <div class="cake">
+        <div class="candle"></div>
+        <div class="top-layer"></div>
+        <div class="middle-layer"></div>
+        <div class="bottom-layer"></div>
+      </div>
     </div>
   </div>
-</div>
 </body>
 </html>
