@@ -12,7 +12,20 @@
       box-sizing: border-box;
     }
     body {
-      background-color: #eac285;
+      background: linear-gradient(45deg, deeppink, blueviolet, orange, #eac285);
+      background-size: 200% 200%;
+      animation: gradient 5s ease infinite;
+    }
+    @keyframes gradient {
+      0% {
+        background-position: 0 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0 50%;
+      }
     }
     div.all{
       display: flex;
@@ -139,13 +152,6 @@
         transform: scale(1) rotate(45deg);
       }
     }
-    video.video{
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      min-width: 100%;
-      min-height: 100%;
-    }
   </style>
   <script>
     const audio = new Audio("happy-birthday.mp3");
@@ -162,9 +168,6 @@
   </script>
 </head>
 <body onclick="play()">
-  <video autoplay muted loop id="video" class="video">
-    <source src="happy-birthday.mp4" type="video/mp4">
-  </video>
   <div class="all">
     <div class="title">
       <p class="happy_birthday">Happy Birthday Gabriela!</p>
