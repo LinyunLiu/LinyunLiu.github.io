@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.6" />
   <title>HAPPY BIRTHDAY</title>
   <style>
     *,
@@ -11,10 +11,22 @@
       margin: 0;
       box-sizing: border-box;
     }
+    @font-face {
+      font-family: 'agatha';
+      src: url("fonts/Agatha.ttf") format('truetype');
+    }
+    @font-face {
+      font-family: 'bayshore';
+      src: url("fonts/Bayshore.otf") format('truetype');
+    }
+    @font-face {
+      font-family: 'america';
+      src: url("fonts/America-Regular.otf") format('truetype');
+    }
     body {
       background: linear-gradient(45deg, deeppink, blueviolet, orange, #eac285);
       background-size: 200% 200%;
-      animation: gradient 5s ease infinite;
+      animation: gradient 6s ease infinite;
     }
     @keyframes gradient {
       0% {
@@ -40,9 +52,25 @@
       margin-top: 50px;
       z-index: 999;
     }
+    div.date{
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      background-color: #713e1600;
+      text-align: center;
+      z-index: 999;
+      margin-top: -100px;
+    }
     p.happy_birthday{
       font-family: "optima",serif;
       font-size: 60px;
+      color: white;
+      font-weight: bold;
+      font-style: italic;
+    }
+    p.date{
+      font-family: "optima",serif;
+      font-size: 20px;
       color: white;
       font-weight: bold;
       font-style: italic;
@@ -179,6 +207,9 @@
         <div class="middle-layer"></div>
         <div class="bottom-layer"></div>
       </div>
+    </div>
+    <div class="date">
+      <p class="date">August 4th 2023</p>
     </div>
   </div>
 </body>
