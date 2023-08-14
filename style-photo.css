@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("wallpaper/photo-3.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("wallpaper/photo.jpg");
     background-color: #161617;
     background-repeat: repeat;
     background-attachment: fixed;
@@ -72,14 +72,8 @@ div.grid-container div img {
     filter: grayscale(100%) sepia(100%) hue-rotate(-10deg);
     border-radius: 8px;
     transition: all .25s ease-in-out;
+    margin-bottom: -8px;
 }
-div.grid-container div p {
-    margin: 5px 0;
-    padding: 0;
-    text-align: center;
-    font-style: italic;
-}
-
 div.highlight-window{
     display: flex;
     position: fixed;

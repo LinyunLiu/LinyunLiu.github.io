@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("wallpaper/blog-1.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("wallpaper/blog.jpg");
     background-color: #161617;
     background-repeat: repeat;
     background-attachment: fixed;
@@ -32,7 +32,7 @@ p.title{
     margin-top: 100px;
     text-align: center;
     font-weight: bold;
-    background: linear-gradient(to right, #424242, #424242);
+    background: linear-gradient(to right, #c0c0c0, #c0c0c0);
     -webkit-background-clip: text; /* For Safari */
     -webkit-text-fill-color: transparent; /* For Safari */
     background-clip: text;

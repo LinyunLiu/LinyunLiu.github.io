@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.1)), url("wallpaper/comp-4.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("wallpaper/comp.jpg");
     background-color: #161617;
     background-repeat: repeat;
     background-attachment: fixed;
@@ -55,10 +55,10 @@ div.main-cards div{
     margin-bottom: 15px;
 }
 div.main-cards div div{
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+    /*box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);*/
     background-color: #00000030;
     backdrop-filter: blur(8px);
-    border: 1px solid #00000070;
+    border: 1px solid #00000000;
     border-radius: 20px;
     width: 100%;
     height: 500px;
@@ -177,7 +177,7 @@ div.top-navi a:hover {
 }
 
 div.top-navi a.active {
-    background-color: #ff8ad8;
+    background-color: #ff2f92;
     border-radius: 4px;
     color: #f4d7f1;
 
