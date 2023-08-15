@@ -95,6 +95,12 @@ div.main-cards div div p.col-1-3 {
     -webkit-text-fill-color: transparent; /* For Safari */
     background-clip: text;
 }
+div.main-cards div div p.col-1-4 {
+    background: linear-gradient(to right, #945200, #ffffff);
+    -webkit-background-clip: text; /* For Safari */
+    -webkit-text-fill-color: transparent; /* For Safari */
+    background-clip: text;
+}
 div.main-cards div div p.col-1-2 {
     background: linear-gradient(to right, #27b99a, #ffffff);
     -webkit-background-clip: text; /* For Safari */
