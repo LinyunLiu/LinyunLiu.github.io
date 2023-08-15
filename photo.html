@@ -8,7 +8,7 @@
     <script>
 
         let links=[]
-        fetch('/src/links.txt')
+        fetch('links.txt')
             .then(response => response.text())
             .then(fileContent => {
                 links = fileContent.split(',');
