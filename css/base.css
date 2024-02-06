@@ -16,7 +16,7 @@
 	--cursor-radius: 0;
 }
 .demo {
-	--cursor-bg: rgba(255, 212, 121, 0.8);
+	--cursor-bg: rgba(246, 233, 197, 0.8);
     --gradient-text-1: #09314c;
     --gradient-text-2: rgb(242 133 93);
     --cursor-blend-mode: none;
@@ -287,20 +287,22 @@ button{
 	margin: 10px;
 	font-family: "source-code-pro", monospace;
 	font-size: 16px;
-	color: black;
-	background: #ffd47950;
-	border: 1px solid #ffd47910;
+	font-weight: bold;
+	color: white;
+	background: #ffd47900;
+	border: 1px solid #ffd47900;
 	border-radius: 10px;
 	height: 50px;
 	width: 200px;
-	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4);
-	backdrop-filter: blur(8px);
+	/*box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4);*/
+	/*backdrop-filter: blur(8px);*/
 	transition: background 0.5s ease-in-out;
 	padding: 0;
 }
 button:hover{
 	cursor: pointer;
-	background: #ffd479;
+	background: #f6e9c5a1;
+	color: black;
 }
 button:hover span {
 	animation: MoveScaleUpInitial 0.3s forwards, MoveScaleUpEnd 0.3s forwards 0.3s;
