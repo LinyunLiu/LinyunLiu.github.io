@@ -105,15 +105,15 @@ div.extra{
     margin-top: 60px;
     flex: 1;
 }
-p.more-about-me{
-    margin-left:10px;
-}
 div.rows-1{
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(8px);
     border-radius: 8px;
     margin: 5px;
+}
+p.more-about-me{
+    margin-left:10px;
 }
 div.rows-2{
     display: flex;
@@ -125,7 +125,6 @@ div.rows-2 div{
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(8px);
     width: 100%;
-    height: 100%;
     margin: 5px;
     transition: transform 0.2s ease-in-out;
     border-radius: 8px;
@@ -170,7 +169,6 @@ div.top-navi a {
     font-size: 18px;
     margin: 5px;
 }
-
 div.top-navi a:hover {
     border-radius: 4px;
     color: #ff85b3;
