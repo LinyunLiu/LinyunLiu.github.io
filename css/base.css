@@ -301,7 +301,7 @@ button{
 }
 button:hover{
 	cursor: pointer;
-	background: #f6e9c5a1;
+	background: #f6e9c5;
 	color: black;
 }
 button:hover span {
