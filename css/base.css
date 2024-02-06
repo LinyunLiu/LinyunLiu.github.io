@@ -324,6 +324,7 @@ button:hover span {
 	}
 }
 p.subtitles{
-	font-family: "greycliff-cf", sans-serif;
+	font-family: "source-code-pro", monospace;
+	font-size: 20px;
 }
 
