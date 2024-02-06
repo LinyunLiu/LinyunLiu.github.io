@@ -13,36 +13,35 @@
 		const supportsCssVars = function () {
 			let e, t = document.createElement("style");
 			return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
-		};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
-		
+		};
+		supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");
+
+		function openPortfolio(){
+			window.open("https://linyunliu.com/PhysicalComputing")
+		}
+		function openPhysicalComputing(){
+			window.open("https://linyunliu.com/PhysicalComputing")
+		}
+		</script>
 	</head>
-	<body class="demo-5">
+	<body class="demo">
 		<main>
 			<div class="frame">
-				<div class="frame__title"> 
-					<h1 class="frame__title-main">Gooey Cursor</h1> 
-					<a aria-label="Back to the article" class="frame__title-back" href="https://tympanus.net/codrops/?p=72438"> 
-						<span class="oh__inner">Back to the article</span> 
-						<svg width="18px" height="18px" viewBox="0 0 24 24"><path vector-effect="non-scaling-stroke" d="M18.25 15.5a.75.75 0 00.75-.75v-9a.75.75 0 00-.75-.75h-9a.75.75 0 000 1.5h7.19L6.22 16.72a.75.75 0 101.06 1.06L17.5 7.56v7.19c0 .414.336.75.75.75z"></path>
-						</svg>
-					</a>
-				</div>
-				<a class="frame__prev" href="https://tympanus.net/Development/ImagePixelLoading/">Previous demo</a>
 				<nav class="frame__demos">
-					<span class="frame__demos-item">Variations: </span>
-					<a class="frame__demos-item" href="index.html">1</a>
-					<a class="frame__demos-item" href="index2.html">2</a>
-					<a class="frame__demos-item" href="index3.html">3</a>
-					<a class="frame__demos-item" href="index4.html">4</a>
-					<span class="frame__demos-item">5</span>
-					<a class="frame__demos-item" href="index6.html">6</a>
-					<a class="frame__demos-item" href="index7.html">7</a>
-					<a class="frame__demos-item" href="index8.html">8</a>
+					<span class="frame__demos-item">Social Media: </span>
+					<a class="frame__demos-item" href="https://github.com/LinyunLiu">GitHub</a>
+					<a class="frame__demos-item" href="https://www.linkedin.com/in/linyun-liu-2a4b05240/">LinkedIn</a>
+					<a class="frame__demos-item" href="https://www.instagram.com/linyunliu42/">Instagram</a>
 				</nav>
 			</div>
 			<div class="content">
-				<h2><i>b</i>yte<i>c</i>raft</h2>
-				<p>Creating flawless digital experiences with precision &amp; expertise</p>
+				<h2><i>H</i>ello<i> W</i>orld</h2>
+				<p class="subtitles">Hello! This is the portal to my personal websites, I am so glad you are here</p>
+				<div class="buttons-frame">
+					<button class="button-portfolio" onclick="openPortfolio()"><span>Portfolios</span></button>
+					<button class="physical-computing" onclick="openPhysicalComputing()"><span>Physical Computing</span></button>
+					<button class="coming-soon"><span>Coming Soon</span></button>
+				</div>
 			</div>
 		</main>
 		<div class="cursor">
@@ -66,7 +65,6 @@
 					        result="gooey"
 					    />
 					</filter>
-
 				</defs>
 			</svg>
 		</div>
