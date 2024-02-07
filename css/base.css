@@ -120,6 +120,7 @@ a:focus-visible {
 }
 
 .frame {
+	margin-left: 50px;
 	position: absolute;
 	width: 100%;
 	padding: var(--page-padding);
@@ -142,33 +143,6 @@ body #cdawrap {
 .frame a {
 	pointer-events: auto;
 }
-
-.frame__title {
-	grid-area: title;
-	display: flex;
-}
-
-.frame__title-main {
-	font-size: inherit;
-	margin: 0;
-	font-weight: inherit;
-}
-
-.frame__title-back {
-	position: relative;
-	display: flex;
-	align-items: flex-end;
-	margin-bottom: 0.15rem;
-}
-
-.frame__title-back span {
-	display: none;
-}
-
-.frame__title-back svg {
-	fill: currentColor;
-}
-
 .frame__prev {
 	grid-area: prev;
 }
@@ -196,7 +170,7 @@ a.frame__demos-item {
 	min-height: 100vh;
 	position: relative;
 	justify-content: center;
-	align-items: start;
+	align-items: center;
 	font-family: "greycliff-cf", sans-serif;
 	font-weight: 300;
 }
@@ -255,12 +229,44 @@ a.frame__demos-item {
 	opacity: 0;
 	border-radius: var(--cursor-radius);
 }
+div.buttons-frame{
+	margin: 50px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+button{
+	margin: 10px;
+	font-family: Futura, "futura-pt", sans-serif;
+	font-size: 16px;
+	color: black;
+	background: #F6E9C520;
+	border: 1px solid #F6E9C520;
+	border-radius: 10px;
+	height: 50px;
+	width: 400px;
+	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4);
+	backdrop-filter: blur(8px);
+	transition: background 0.1s ease-in-out;
+	padding: 0;
+}
+button:hover{
+	cursor: pointer;
+	background: #f6e9c5;
+	color: black;
+}
+p.subtitles{
+	font-family: Futura, "futura-pt", sans-serif;
+	font-size: 20px;
+}
+
 @media screen and (min-width: 53em) {
 	:root {
 		--columns: 30;
 		--page-padding: 2rem;
 	}
 	.frame {
+		margin-left: 0;
 		grid-template-columns: auto auto auto 1fr;
 		grid-template-areas: 'title prev sponsor demos';
 		justify-items: start;
@@ -275,36 +281,8 @@ a.frame__demos-item {
 	.content {
 		align-items: center;
 	}
-}
-
-div.buttons-frame{
-	margin: 50px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-button{
-	margin: 10px;
-	font-family: Futura, "futura-pt", sans-serif;
-	font-size: 16px;
-	color: black;
-	background: #F6E9C580;
-	border: 1px solid #F6E9C520;
-	border-radius: 10px;
-	height: 50px;
-	width: 200px;
-	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4);
-	backdrop-filter: blur(8px);
-	transition: background 0.1s ease-in-out;
-	padding: 0;
-}
-button:hover{
-	cursor: pointer;
-	background: #f6e9c5;
-	color: black;
-}
-p.subtitles{
-	font-family: Futura, "futura-pt", sans-serif;
-	font-size: 20px;
+	button{
+		width: 220px;
+	}
 }
 
