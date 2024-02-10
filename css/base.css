@@ -6,8 +6,8 @@
 
 :root {
 	font-size: 14px;
-	--color-text: #000;
-	--color-bg: #f2f1eb;
+	--color-text: #f3eee0;
+	--color-bg: #f3eee0;
 	--color-link: #000;
 	--color-link-hover: #000;
 	--page-padding: 1rem;
@@ -17,10 +17,12 @@
 }
 .demo {
 	--cursor-bg: rgba(246, 233, 197, 0.8);
-    --gradient-text-1: #09314c;
-    --gradient-text-2: rgb(242 133 93);
-    --cursor-blend-mode: none;
-    background-image: url(../img/bg.jpg);
+	--gradient-text-0: #ec1752;
+	--gradient-text-1: #ff2f92;
+	--gradient-text-2: #1bb3de;
+	--gradient-text-3: white;
+	--cursor-blend-mode: none;
+	background: #f3eee0;
 }
 
 body {
@@ -33,7 +35,7 @@ body {
 	background-size: cover;
 	background-position: 50% 50%;
 	height: 100vh;
-	overflow: hidden;
+	justify-content: center;
 }
 
 /* Page Loader */
@@ -43,7 +45,6 @@ body {
 	position: fixed;
 	z-index: 1000;
 }
-
 .js .loading::before {
 	top: 0;
 	left: 0;
@@ -51,7 +52,6 @@ body {
 	height: 100%;
 	background: var(--color-bg);
 }
-
 .js .loading::after {
 	top: 50%;
 	left: 50%;
@@ -64,7 +64,6 @@ body {
 	animation: loaderAnim 0.7s linear infinite alternate forwards;
 
 }
-
 @keyframes loaderAnim {
 	to {
 		opacity: 1;
@@ -72,18 +71,17 @@ body {
 	}
 }
 
+
 a {
 	text-decoration: none;
-	color: var(--color-link);
+	color: black;
 	outline: none;
 	cursor: pointer;
 }
-
 a:hover {
 	color: var(--color-link-hover);
 	outline: none;
 }
-
 /* Better focus styles from https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
 a:focus {
 	/* Provide a fallback style for browsers
@@ -91,13 +89,11 @@ a:focus {
 	outline: none;
 	background: lightgrey;
 }
-
 a:focus:not(:focus-visible) {
 	/* Remove the focus indicator on mouse-focus for browsers
 	 that do support :focus-visible */
 	background: transparent;
 }
-
 a:focus-visible {
 	/* Draw a very noticeable focus style for
 	 keyboard-focus on browsers that do support
@@ -106,22 +102,10 @@ a:focus-visible {
 	background: transparent;
 }
 
-.unbutton {
-	background: none;
-	border: 0;
-	padding: 0;
-	margin: 0;
-	font: inherit;
-	cursor: pointer;
-}
-
-.unbutton:focus {
-	outline: none;
-}
 
 .frame {
 	margin-left: 50px;
-	position: absolute;
+	margin-top: 2px;
 	width: 100%;
 	padding: var(--page-padding);
 	display: grid;
@@ -134,76 +118,77 @@ a:focus-visible {
 	pointer-events: none;
 	align-items: center;
 	z-index: 999;
-	opacity: 0;
 }
 
 body #cdawrap {
-    justify-self: start;
+	justify-self: start;
 }
 
 .frame a {
 	pointer-events: auto;
 }
-.frame__prev {
-	grid-area: prev;
-}
-
 .frame__demos {
+	opacity: 0;
 	grid-area: demos;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 2rem;
+	z-index: 9999;
+	margin-right: 20px;
 }
-
 .frame__demos-item:first-child {
 	width: 100%;
 }
-
 a.frame__demos-item {
 	font-weight: bold;
 }
 
 .content {
-	padding: 0 var(--page-padding);
+	padding: 20px;
 	display: flex;
 	flex-direction: column;
-	width: 100vw;
-	min-height: 100vh;
-	position: relative;
 	justify-content: center;
 	align-items: center;
-	font-family: "greycliff-cf", sans-serif;
-	font-weight: 300;
+	margin:  -105px 10px 10px 10px;
+	background: linear-gradient(150deg, black, #141414f9, #141414f9, #353535);
+	box-shadow: 0 0 5rem 0 rgba(0, 0, 0, 0.4);
+	border-radius: 12px;
+	min-height: 680px;
+	height: 97vh;
+	overflow: hidden;
 }
 
 .content h2 {
-	font-size: 16vw;
+	font-size: 12vw;
 	line-height: 1;
 	margin: 0;
 	pointer-events: none;
-	background-color: var(--gradient-text-1);
-	background-image: linear-gradient(45deg, var(--gradient-text-1), var(--gradient-text-2));
+	background-image: linear-gradient(120deg,
+	var(--gradient-text-0), var(--gradient-text-1), var(--gradient-text-2), var(--gradient-text-3));
 	background-size: 100%;
 	background-repeat: repeat;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
-
-.content h2 i {
-	font-family: "lores-9-plus-wide", sans-serif;
-	font-weight: 400;
+.content h2 i.larger {
 	font-style: normal;
 	letter-spacing: -1.75vw;
-	font-size: 14.25vw;
+	font-size: 14vw;
 }
-
 .content p {
-	margin: 3vh 0 0 0;
-	max-width: 30ch;
-	font-weight: 400;
-	font-size: clamp(1.5rem,2vw,2rem);
-	font-variation-settings: "wght" 400, "opsz" 72, "ital" 0;
+	margin: 3vh 4vh 2vh 6vh;
+	max-width: 50ch;
+	font-size: 16px;
 	pointer-events: none;
+	font-family: "greycliff-cf", sans-serif;
+	color: #f2f1eb;
+}
+.content p span{
+	font-weight: bold;
+}
+.content p.footer{
+	font-size: 16px;
+	font-family: "Snell Roundhand", serif;
 }
 
 .cursor {
@@ -231,23 +216,33 @@ a.frame__demos-item {
 	border-radius: var(--cursor-radius);
 }
 div.buttons-frame{
-	margin: 50px;
+	margin: 20px 0 20px 0;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	justify-content: center;
+}
+button.portfolio{
+	background: #ec1752;
+	color: #f8c4e3;
+}
+button.physical-computing{
+	background: #1bb3de;
+	color: #BBE2EC
+}
+button.coming-soon{
+	background: #f2f1eb;
+	color: black
 }
 button{
-	margin: 10px;
-	font-family: Futura, "futura-pt", sans-serif;
-	font-size: 16px;
-	border-radius: 10px;
-	color: black;
-	background: #F6E9C520;
-	border: 1px solid #F6E9C520;
+	margin: 10px 10px 10px 10px;
+	font-family: "greycliff-cf", sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	border: 1px solid #191919;
+	border-radius: 30px;
 	height: 50px;
-	width: 400px;
-	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4);
-	backdrop-filter: blur(8px);
+	width: 350px;
 	transition: background 0.1s ease-in-out;
 	padding: 0;
 }
@@ -256,17 +251,6 @@ button:hover{
 	background: #f6e9c5;
 	color: black;
 }
-button:first-child{
-	border-radius: 30px 30px 10px 10px;
-}
-button:last-child{
-	border-radius: 10px 10px 30px 30px;
-}
-p.subtitles{
-	font-family: Futura, "futura-pt", sans-serif;
-	font-size: 20px;
-}
-
 @media screen and (min-width: 53em) {
 	:root {
 		--columns: 30;
@@ -274,29 +258,50 @@ p.subtitles{
 	}
 	.frame {
 		margin-left: 0;
+		margin-bottom: 80px;
 		grid-template-columns: auto auto auto 1fr;
 		grid-template-areas: 'title prev sponsor demos';
 		justify-items: start;
 		grid-gap: 2rem;
-		opacity: 100%;
 	}
 	.frame__demos {
 		justify-self: end;
+		opacity: 100%;
+		margin-right: 30px;
 	}
 	.frame__demos-item:first-child {
 		width: auto;
 	}
 	.content {
 		align-items: center;
+		margin-top: -70px;
+	}
+	.content{
+		margin: -70px 50px 50px 50px;
+		height: 84vh;
+	}
+	.content p {
+		font-size: 20px;
 	}
 	button{
-		width: 220px;
+		width: 300px;
 	}
-	button:first-child{
-		border-radius: 30px 10px 10px 10px;
+	button.portfolio{
+		background: linear-gradient(120deg, #ec1752, #ec1752, mediumpurple);
+		color: #f8c4e3;
 	}
-	button:last-child{
-		border-radius: 10px 10px 30px 10px;
+	button.physical-computing{
+		background: linear-gradient(120deg, mediumpurple, mediumpurple, #1bb3de, #1bb3de);
+		color: #BBE2EC
+	}
+	button.coming-soon{
+		background: linear-gradient(120deg, #1bb3de, #1bb3de, #1bb3de, #f2f1eb);
+		color: #BBE2EC
+	}
+	button:hover{
+		cursor: pointer;
+		background: #f6e9c5;
+		color: black;
 	}
 }
 
