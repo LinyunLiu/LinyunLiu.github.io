@@ -1,8 +1,21 @@
+p.page-title{
+    font-size: clamp(24px, 4vw, 48px);
+    font-family: 'nasalization', serif;
+    color: #222222;
+    text-align: center;
+}
+p.page-subtitle{
+    font-size: clamp(15px, 4vw, 30px);
+    font-family: 'dystopian', serif;
+    color: #222222;
+    text-align: center;
+}
 /*85:50*/
 div.profile{
     opacity: 1;
+    color: antiquewhite;
     cursor: default;
-    background: url("https://static.vecteezy.com/system/resources/previews/009/302/766/non_2x/silhouette-landscape-with-fog-forest-pine-trees-mountains-illustration-of-night-view-mist-black-and-white-good-for-wallpaper-background-banner-cover-poster-free-vector.jpg");
+    background: url("resources/profile/profilebg-1.jpg");
     background-size: cover;
     font-family: 'nasalization', serif;
     display: flex;
@@ -15,7 +28,7 @@ div.profile{
     min-width: 255px;
     min-height: 150px;
     padding: 15px;
-    margin: 0;
+    margin: 0 0 0 0;
     justify-content: space-between;
     align-items: center;
     position: relative;
@@ -48,15 +61,19 @@ p.name{
     font-size: clamp(24px, 4vw, 35px);
     margin-bottom: 10px;
     white-space: nowrap;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.7));
 }
 p.description{
-    font-size: clamp(10px, 2vw, 16px);
+    font-size: clamp(10px, 2vw, 14px);
     white-space: nowrap;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.7));
 }
 p.profile-id{
     align-self: center;
     font-size: clamp(12px, 2vw, 18px);
     white-space: nowrap;
+    color: #2d2d2d;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.7));
 }
 p.year{
     position: absolute;
@@ -65,3 +82,20 @@ p.year{
     font-size: 12px;
     color: lightgreen;
 }
+p.quote{
+    position: absolute;
+    text-align: center;
+    font-size: clamp(7px, 4vw, 14px);
+    font-family: 'nasalization', serif;
+    color: #222222;
+    bottom: -30px;
+}
+
+
+
+
+
+
+
+
+
