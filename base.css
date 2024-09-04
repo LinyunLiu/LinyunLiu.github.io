@@ -93,6 +93,7 @@ div.profile{
     max-width: 600px;
     max-height: 320px;
     padding: 15px;
+    margin: 0;
     justify-content: space-between;
     align-items: center;
     position: relative;
