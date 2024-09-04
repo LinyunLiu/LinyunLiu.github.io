@@ -10,17 +10,13 @@
   <link rel="stylesheet" type="text/css" href="style_index.css"/>
   <title>Home</title>
   <script>
-    function tm(show){
-      let m = document.getElementById('menu');
-      if (show){
-        m.style.display = 'flex'
-        setTimeout(function(){
-          m.style.display = 'none'
-        }, 10000)
-      }
-      else{
-        m.style.display = 'none'
-      }
+    function toggleNav() {
+      let navigation_bar = document.getElementById("navigation-bar");
+      navigation_bar.className += " expand"
+    }
+    function closeNav(){
+      let navigation_bar = document.getElementById("navigation-bar");
+      navigation_bar.className = "navigation-bar"
     }
     function handleMouseMove(event) {
       const target = event.currentTarget;
@@ -75,15 +71,14 @@
   </style>
 </head>
 <body>
-  <div class="nav">
-    <p class="page-name">HOME</p>
-    <img class="icon" src="resources/menu.svg" alt="" onmouseover="tm(true)" onclick="tm(true)">
-    <div class="menu" id="menu">
-      <img class="icon close" src="resources/close.svg" alt="" onclick="tm(false)">
-      <a href="">Home</a>
-      <a href="">Projects</a>
-      <a href="">Resume</a>
-    </div>
+  <div class="navigation-bar" id="navigation-bar">
+    <nav class="nav-links" id="nav-links">
+      <a href="" class="active">HOME</a>
+      <a href="">PROJECTS</a>
+      <a href="">RESUME</a>
+    </nav>
+    <a href="javascript:void(0);" class="list-icon" id="list-icon" onclick="toggleNav()"><img src="resources/list.svg" alt=""></a>
+    <a href="javascript:void(0);" class="close-icon" id="close-icon" onclick="closeNav()"><img src="resources/close.svg" alt=""></a>
   </div>
   <main>
     <br><br><br>
