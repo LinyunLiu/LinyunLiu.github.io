@@ -8,8 +8,46 @@
   <link rel="shortcut icon" href="icon.png"/>
   <link rel="stylesheet" type="text/css" href="base.css"/>
   <title>Home</title>
+  <script>
+    function tm(show){
+      let m = document.getElementById('menu');
+      if (show){
+        m.style.display = 'flex'
+        setTimeout(function(){
+          m.style.display = 'none'
+        }, 10000)
+      }
+      else{
+        m.style.display = 'none'
+      }
+    }
+  </script>
 </head>
 <body>
-
+  <div class="nav">
+    <p class="page-name">HOME</p>
+    <img class="icon" src="_resources/menu.svg" alt="" onmouseover="tm(true)" onclick="tm(true)">
+    <div class="menu" id="menu">
+      <img class="icon close" src="_resources/close.svg" alt="" onclick="tm(false)">
+      <a href="">Home</a>
+      <a href="">Projects</a>
+      <a href="">Resume</a>
+    </div>
+  </div>
+  <main>
+    <br><br><br>
+    <div class="profile">
+      <p class="year">2024</p>
+      <div class="profile-info">
+        <img class="profile-pic" src="_resources/profile.jpeg" alt="">
+        <div class="profile-info-text">
+          <p style="font-weight: bold; font-size: 24px; margin-bottom: 10px; padding: 5px 5px 5px 14px; background-color:rgb(255,255,255,0.1); border-radius: 8px">LINYUN LIU</p>
+          <p>Computer Science</p>
+          <p>Full Stack Developer</p>
+        </div>
+      </div>
+      <p class="profile-id">>>>> HX8682HGBS73B8B018BDKXXPO >>></p>
+    </div>
+  </main>
 </body>
 </html>
