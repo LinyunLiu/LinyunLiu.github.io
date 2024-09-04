@@ -1,5 +1,6 @@
 /*85:50*/
 div.profile{
+    opacity: 1;
     cursor: default;
     background: url("https://static.vecteezy.com/system/resources/previews/009/302/766/non_2x/silhouette-landscape-with-fog-forest-pine-trees-mountains-illustration-of-night-view-mist-black-and-white-good-for-wallpaper-background-banner-cover-poster-free-vector.jpg");
     background-size: cover;
@@ -63,37 +64,4 @@ p.year{
     writing-mode: vertical-rl;
     font-size: 12px;
     color: lightgreen;
-}
-@property --angle{
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-}
-div.profile::after{
-    opacity: 0;
-    content: '';
-    position: absolute;
-    width: 101%;
-    height: 102%;
-    background-image: conic-gradient(from var(--angle), #30302e, #070707, antiquewhite, #30302e);
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    z-index: -1;
-    padding: 3px;
-    animation: 3s spin linear infinite;
-    transition: 0.3s all ease-in-out;
-    border-radius: 8px;
-}
-@keyframes spin{
-    0%{
-        --angle: 0deg;
-    }
-
-    100%{
-        --angle: 360deg;
-    }
-}
-div.profile:hover::after{
-    opacity: 1;
 }

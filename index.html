@@ -22,7 +22,57 @@
         m.style.display = 'none'
       }
     }
+    function handleMouseMove(event) {
+      const target = event.currentTarget;
+      target.style.transition = `none`
+      target.style.filter = `drop-shadow(calc(-0.08 * var(--mouse-x)) calc(0.1 * var(--mouse-y)) 10px rgba(0, 0, 0, 0.3))`
+      const rect = target.getBoundingClientRect();
+      const mouseX = event.clientX - rect.left;
+      const mouseY = event.clientY - rect.top;
+      target.style.setProperty('--mouse-x', `${mouseX}px`);
+      target.style.setProperty('--mouse-y', `${mouseY}px`);
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const rX = (centerX - mouseX)/rect.width
+      const rY = (centerY - mouseY)/rect.height
+      const val = 25
+      target.style.transform = `rotateX(${rY*val}deg) rotateY(${rX*val}deg)`;
+    }
+    function handleMouseLeave(event){
+      const target = event.currentTarget;
+      setTimeout(function (){
+        target.style.filter = `drop-shadow(0 0 0 rgba(0, 0, 0, 0.0))`
+        target.style.transition = `0.5s all ease-in-out`
+        target.style.transform = `rotateY(0deg) rotateX(0deg)`
+      }, 200)
+    }
   </script>
+  <style>
+    div.profile::before{
+      opacity: 0;
+      --mouse-x: inherit;
+      --mouse-y: inherit;
+      border-radius: 8px;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      z-index: 2;
+      transition: 0.3s all ease-in-out;
+      background: radial-gradient(500px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.4), transparent 40%);
+    }
+    div.profile{
+      filter: drop-shadow(calc(-0.1 * var(--mouse-x)) calc(0.1 * var(--mouse-y)) 10px rgba(0, 0, 0, 0.4));
+    }
+    div.profile:hover::before{
+      opacity: 1;
+    }
+  </style>
 </head>
 <body>
   <div class="nav">
@@ -37,7 +87,7 @@
   </div>
   <main>
     <br><br><br>
-    <div class="profile">
+    <div class="profile" id="profile" onmousemove="handleMouseMove(event)" onmouseleave="handleMouseLeave(event)">
       <p class="year">2024</p>
       <div class="profile-info">
         <img class="profile-pic" src="resources/profile-2.jpeg" alt="">
