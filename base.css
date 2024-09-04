@@ -23,7 +23,6 @@ main{
 p{
     margin: 0;
 }
-
 /*NAVIGATION BAR*/
 div.nav{
     display: flex;
@@ -34,6 +33,7 @@ div.nav{
     height: 50px;
     padding: 10px;
     justify-content: space-between;
+    z-index: 9999;
 }
 p.page-name{
     font-family: 'nasalization', serif;
@@ -48,14 +48,16 @@ div.menu{
     justify-content: center;
     align-items: center;
     position: absolute;
-    width: 40vw;
+    width: 20vw;
     max-width: 350px;
+    min-width: 200px;
     height: 200px;
     border-radius: 8px;
     padding: 30px 10px 30px 10px;
-    background: #222222;
+    background: rgb(0,0,0,0.8);
     right: 6px;
     top: 55px;
+    z-index: 9998;
 }
 div.menu a{
     text-align: center;
@@ -69,8 +71,8 @@ div.menu a{
 div.menu a:hover{
     background: rgb(255,255,255,0.1);
     padding: 10px;
-    width: 25vw;
-    max-width: 330px;
+    width: 15vw;
+    max-width: 200px;
     border-radius: 8px;
 }
 img.close{
@@ -78,55 +80,6 @@ img.close{
     top: 10px;
     left: 10px;
     width: 20px;
-}
-
-/*CONTENT*/
-div.profile{
-    cursor: default;
-    background: #222222;
-    font-family: 'nasalization', serif;
-    display: flex;
-    flex-direction: column;
-    border-radius: 8px;
-    width: 85vw;
-    height: 45vw;
-    max-width: 600px;
-    max-height: 320px;
-    padding: 15px;
-    margin: 0;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-div.profile-info{
-    display: flex;
-    flex-direction: row;
-    align-self: start;
-    padding: 0;
-    margin: 0;
-    float: left;
-}
-div.profile-info-text{
-    display: flex;
-    flex-direction: column;
-}
-img.profile-pic{
-    width: 30vw;
-    height: 30vw;
-    max-width: 250px;
-    max-height: 250px;
-    border-radius: 8px;
-    margin-right: 20px;
-}
-p.profile-id{
-    align-self: start;
-}
-p.year{
-    position: absolute;
-    right: 5px;
-    writing-mode: vertical-rl;
-    font-size: 12px;
-    color: #bc5b39;
 }
 
 

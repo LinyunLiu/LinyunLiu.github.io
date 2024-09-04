@@ -1,0 +1,99 @@
+/*85:50*/
+div.profile{
+    cursor: default;
+    background: url("https://static.vecteezy.com/system/resources/previews/009/302/766/non_2x/silhouette-landscape-with-fog-forest-pine-trees-mountains-illustration-of-night-view-mist-black-and-white-good-for-wallpaper-background-banner-cover-poster-free-vector.jpg");
+    background-size: cover;
+    font-family: 'nasalization', serif;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    width: 85vw;
+    height: 50vw;
+    max-width: 595px;
+    max-height: 350px;
+    min-width: 255px;
+    min-height: 150px;
+    padding: 15px;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+div.profile-info{
+    display: flex;
+    flex-direction: row;
+    align-self: start;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+div.profile-info-text{
+    display: flex;
+    flex-direction: column;
+}
+img.profile-pic{
+    width: 15vw;
+    height: 15vw;
+    max-width: 160px;
+    max-height:160px;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 5px;
+    margin-right: 20px;
+    opacity: 70%;
+}
+p.name{
+    font-weight: bold;
+    font-size: clamp(24px, 4vw, 35px);
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+p.description{
+    font-size: clamp(10px, 2vw, 16px);
+    white-space: nowrap;
+}
+p.profile-id{
+    align-self: center;
+    font-size: clamp(12px, 2vw, 18px);
+    white-space: nowrap;
+}
+p.year{
+    position: absolute;
+    right: 5px;
+    writing-mode: vertical-rl;
+    font-size: 12px;
+    color: lightgreen;
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+div.profile::after{
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 101%;
+    height: 102%;
+    background-image: conic-gradient(from var(--angle), #30302e, #070707, antiquewhite, #30302e);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    animation: 3s spin linear infinite;
+    transition: 0.3s all ease-in-out;
+    border-radius: 8px;
+}
+@keyframes spin{
+    0%{
+        --angle: 0deg;
+    }
+
+    100%{
+        --angle: 360deg;
+    }
+}
+div.profile:hover::after{
+    opacity: 1;
+}
