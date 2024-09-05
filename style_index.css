@@ -1,5 +1,5 @@
 ::selection {
-    background: rgb(0,0,0,1);
+    background: rgb(0,0,0,0.3);
 }
 div.main-1{
     width: 100%;
@@ -155,10 +155,10 @@ p.intro{
 }
 div.socials{
     width: 85vw;
-    height: 100px;
+    height: 70px;
     max-width: 595px;
     min-width: 255px;
-    background: url("resources/profile/profilebg-2.jpg") top;
+    background: url("resources/profile/profilebg-2.jpg") center;
     background-size: cover;
     border-radius: 8px;
     padding: 20px;
@@ -168,7 +168,7 @@ div.socials{
     margin-bottom: 20px;
 }
 img.social{
-    width: 3vw;
+    width: 4vw;
     min-width: 50px;
     cursor: pointer;
     transition: 0.4s all ease-in-out;
@@ -178,7 +178,6 @@ img.social:hover{
     transform: scale(1.2);
 }
 div.activities{
-    cursor: pointer;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -196,11 +195,16 @@ div.activities div{
     align-items: center;
 }
 div.activities img{
+    cursor: pointer;
     width: 250px;
     border-radius: 5px;
     object-fit: cover;
     transition: 0.3s all ease-in-out;
     margin: 10px;
+    filter: grayscale(100%);
+}
+div.activities img:hover{
+    filter: grayscale(0);
 }
 p.activities-title{
     font-family: nasalization, serif;
@@ -243,6 +247,23 @@ button.view-project{
 button.download-resume{
     color: #c8e68f;
     background-color: #12463d;
+}
+
+
+div.footer{
+    width: 100%;
+    background-color: #222222;
+    height: 40px;
+    color: #c8e68f;
+    justify-content: center;
+    align-items: center;
+    font-family: 'nasalization', serif;
+    text-align: center;
+    padding: 0;
+    font-size: 12px;
+}
+div.footer img{
+    width: 12px;
 }
 
 
