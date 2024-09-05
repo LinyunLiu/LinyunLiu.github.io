@@ -8,67 +8,8 @@
   <link rel="shortcut icon" href="icon.png"/>
   <link rel="stylesheet" type="text/css" href="base.css"/>
   <link rel="stylesheet" type="text/css" href="style_index.css"/>
+  <script src="script.js"></script>
   <title>Home</title>
-  <script>
-    function toggleNav() {
-      let navigation_bar = document.getElementById("navigation-bar");
-      navigation_bar.className += " expand"
-    }
-    function closeNav(){
-      let navigation_bar = document.getElementById("navigation-bar");
-      navigation_bar.className = "navigation-bar"
-    }
-    function handleMouseMove(event) {
-      const target = event.currentTarget;
-      target.style.transition = `none`
-      target.style.filter = `drop-shadow(calc(-0.08 * var(--mouse-x)) calc(0.1 * var(--mouse-y)) 10px rgba(0, 0, 0, 0.3))`
-      const rect = target.getBoundingClientRect();
-      const mouseX = event.clientX - rect.left;
-      const mouseY = event.clientY - rect.top;
-      target.style.setProperty('--mouse-x', `${mouseX}px`);
-      target.style.setProperty('--mouse-y', `${mouseY}px`);
-
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-
-      const rX = (centerX - mouseX)/rect.width
-      const rY = (centerY - mouseY)/rect.height
-      const val = 25
-      target.style.transform = `rotateX(${rY*val}deg) rotateY(${rX*val}deg)`;
-    }
-    function handleMouseLeave(event){
-      const target = event.currentTarget;
-      setTimeout(function (){
-        target.style.filter = `drop-shadow(0 0 0 rgba(0, 0, 0, 0.0))`
-        target.style.transition = `0.5s all ease-in-out`
-        target.style.transform = `rotateY(0deg) rotateX(0deg)`
-      }, 200)
-    }
-  </script>
-  <style>
-    div.profile::before{
-      opacity: 0;
-      --mouse-x: inherit;
-      --mouse-y: inherit;
-      border-radius: 8px;
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 50%;
-      left: 50%;
-      translate: -50% -50%;
-      z-index: 2;
-      transition: 0.3s all ease-in-out;
-      background: radial-gradient(500px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.4), transparent 40%);
-    }
-    div.profile{
-      filter: drop-shadow(calc(-0.1 * var(--mouse-x)) calc(0.1 * var(--mouse-y)) 10px rgba(0, 0, 0, 0.4));
-    }
-    div.profile:hover::before{
-      opacity: 1;
-    }
-  </style>
 </head>
 <body>
   <div class="navigation-bar" id="navigation-bar">
@@ -81,24 +22,69 @@
     <a href="javascript:void(0);" class="close-icon" id="close-icon" onclick="closeNav()"><img src="resources/icons/close.svg" alt=""></a>
   </div>
   <main>
-    <br><br><br><br><br><br><br>
-    <p class="page-title">Welcome to my website ...</p>
-    <p class="page-subtitle">Have fun exploring !</p>
-    <br><br><br>
-    <div class="profile" id="profile" onmousemove="handleMouseMove(event)" onmouseleave="handleMouseLeave(event)">
-      <p class="year">2024</p>
-      <div class="profile-info">
-        <img class="profile-pic" src="resources/profile/profile-2.jpeg" alt="">
-        <div class="profile-info-text">
-          <p class="name">LINYUN LIU</p>
-          <p class="description">&#8226; Full Stack Developer</p>
-          <p class="description">&#8226; Computers & Films Enthusiast</p>
+
+    <div class="main-1">
+      <br><br><br><br><br><br><br><br><br>
+      <p class="page-title">Welcome to my website ...</p>
+      <p class="page-subtitle">amuse-toi bien!</p>
+      <br><br><br>
+      <div class="profile" id="profile" onmousemove="handleMouseMove(event)" onmouseleave="handleMouseLeave(event)">
+        <p class="year">2024</p>
+        <div class="profile-info">
+          <img class="profile-pic" src="resources/profile/profile-2.jpeg" alt="">
+          <div class="profile-info-text">
+            <p class="name">LINYUN LIU</p>
+            <p class="description">&#8226; Full Stack Developer</p>
+            <p class="description">&#8226; Computers & Films Enthusiast</p>
+          </div>
         </div>
+        <p class="profile-id">>>>>>>>> HX8682HGBS73B8B018BDKXXPO</p>
       </div>
-      <p class="profile-id">>>>>>>>> HX8682HGBS73B8B018BDKXXPO</p>
-      <p class="quote">"I have no special talents. I am only passionately curious."</p>
     </div>
-    <br><br><br>
+
+    <div class="main-2">
+      <br><br><br>
+      <p class="section-title">Who am I</p><br>
+      <div class="socials">
+        <img class="social" src="resources/icons/github.svg" alt="">
+        <img class="social" src="resources/icons/linkedin.svg" alt="">
+        <img class="social" src="resources/icons/instagram.svg" alt="">
+        <img class="social" src="resources/icons/mail.svg" alt="">
+      </div>
+      <div class="content">
+        <p class="intro">Howdy, I'm Linyun, a computer science enthusiast with a passion for web development, physical computing,
+          and AI. I love bringing ideas to life through code, whether it's crafting interactive web experiences or
+          experimenting with hardware. In addition to my tech pursuits, I’m also a film nerd, constantly inspired by
+          the storytelling and creativity in cinema. Welcome to my space, where I combine my love for technology and
+          the arts!
+        </p>
+      </div>
+    </div>
+
+    <br><br><br><br><br>
+    <div class="buttons">
+      <button class="view-project">View Projects</button>
+      <button class="download-resume">Download Resume</button>
+    </div>
+
+    <div class="activities">
+      <div>
+        <img src="https://images.alphacoders.com/134/1345265.png" alt="">
+        <p class="activities-title">Autonomous Robot</p>
+      </div>
+      <div>
+        <img src="https://wallpapers.com/images/hd/sci-fi-wallpaper-p0ae7igxgxoodasn.jpg" alt="">
+        <p class="activities-title">Artism.life</p>
+      </div>
+      <div>
+        <img src="https://images2.alphacoders.com/134/1344706.png" alt="">
+        <p class="activities-title">iMessage ChatBot</p>
+      </div>
+      <div>
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/719f35d4-9849-4033-be70-c1698efc9448/dfa9rty-99cfb371-2671-48ca-813f-2c98a22dcb39.png/v1/fill/w_1280,h_720,q_80,strp/futuristic_retro_wallpaper_by_wizzygfx2_dfa9rty-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvNzE5ZjM1ZDQtOTg0OS00MDMzLWJlNzAtYzE2OThlZmM5NDQ4XC9kZmE5cnR5LTk5Y2ZiMzcxLTI2NzEtNDhjYS04MTNmLTJjOThhMjJkY2IzOS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.V9h0MCykfCyH3T3mDUsF8HZRwBN9xkB6807bEPaP1aI" alt="">
+        <p class="activities-title">Hello World</p>
+      </div>
+    </div>
   </main>
 </body>
 </html>

@@ -1,14 +1,37 @@
+::selection {
+    background: rgb(0,0,0,1);
+}
+div.main-1{
+    width: 100%;
+    /*background: linear-gradient(180deg, #c8e68f, #c8e68f);*/
+    background-color: #c8e68f;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+div.main-2{
+    width: 100%;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
 p.page-title{
-    font-size: clamp(24px, 4vw, 48px);
-    font-family: 'nasalization', serif;
+    font-size: clamp(50px, 5vw, 80px);
+    font-family: 'dystopian', serif;
     color: #222222;
     text-align: center;
 }
 p.page-subtitle{
-    font-size: clamp(15px, 4vw, 30px);
-    font-family: 'dystopian', serif;
-    color: #222222;
+    font-size: clamp(10px, 3vw, 30px);
+    font-family: 'nasalization', serif;
     text-align: center;
+    color: #424242;
 }
 /*85:50*/
 div.profile{
@@ -28,10 +51,32 @@ div.profile{
     min-width: 255px;
     min-height: 150px;
     padding: 15px;
-    margin: 0 0 0 0;
+    margin: 0 0 100px 0;
     justify-content: space-between;
     align-items: center;
     position: relative;
+}
+div.profile::before{
+    opacity: 0;
+    --mouse-x: inherit;
+    --mouse-y: inherit;
+    border-radius: 8px;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 2;
+    transition: 0.3s all ease-in-out;
+    background: radial-gradient(500px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.5), transparent 40%);
+}
+div.profile{
+    filter: drop-shadow(calc(-0.1 * var(--mouse-x)) calc(0.1 * var(--mouse-y)) 10px rgba(0, 0, 0, 0.4));
+}
+div.profile:hover::before{
+    opacity: 1;
 }
 div.profile-info{
     display: flex;
@@ -82,18 +127,123 @@ p.year{
     font-size: 12px;
     color: lightgreen;
 }
-p.quote{
-    position: absolute;
-    text-align: center;
-    font-size: clamp(7px, 4vw, 14px);
-    font-family: 'nasalization', serif;
+
+/*MAIN II*/
+p.section-title{
+    font-size: clamp(28px, 4vw, 48px);
+    font-family: 'dystopian', serif;
     color: #222222;
-    bottom: -30px;
+    text-align: center;
+}
+p.section-subtitle{
+    font-size: clamp(10px, 3vw, 30px);
+    font-family: 'dystopian', serif;
+    color: gray;
+    text-align: center;
+}
+div.content{
+    width: 85vw;
+    max-width: 595px;
+    min-width: 255px;
+    color: #222222;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+p.intro{
+    font-family: 'nasalization', serif;
+    font-size: clamp(12px, 3vw, 20px);
+}
+div.socials{
+    width: 85vw;
+    height: 100px;
+    max-width: 595px;
+    min-width: 255px;
+    background: url("resources/profile/profilebg-2.jpg") top;
+    background-size: cover;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+img.social{
+    width: 3vw;
+    min-width: 50px;
+    cursor: pointer;
+    transition: 0.4s all ease-in-out;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
+}
+img.social:hover{
+    transform: scale(1.2);
+}
+div.activities{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 255px;
+    background-color: #222222;
+    width: 100%;
+    height: 300px;
+    overflow: scroll;
+}
+div.activities div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+div.activities img{
+    width: 250px;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: 0.3s all ease-in-out;
+    margin: 10px;
+}
+p.activities-title{
+    font-family: nasalization, serif;
+    transition: 0.3s all ease-in-out;
+    color: antiquewhite;
 }
 
 
 
-
+/*BUTTONS*/
+div.buttons{
+    width: 85vw;
+    max-width: 595px;
+    min-width: 255px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+div.buttons button{
+    cursor: pointer;
+    width: 20vw;
+    max-width: 240px;
+    min-width: 160px;
+    height: 42px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-family: nasalization, serif;
+    font-weight: bold;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.1));
+    transition: 0.3s all ease-in-out;
+}
+div.buttons button:hover{
+    transform: scale(1.02);
+}
+button.view-project{
+    color: #12463d;
+    background-color: #c8e68f;
+}
+button.download-resume{
+    color: #c8e68f;
+    background-color: #12463d;
+}
 
 
 
