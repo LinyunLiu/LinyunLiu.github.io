@@ -3,8 +3,8 @@
 }
 div.main-1{
     width: 100%;
-    /*background: linear-gradient(180deg, #c8e68f, #c8e68f);*/
-    background-color: #c8e68f;
+    /*background: linear-gradient(180deg, #222222);*/
+    background-color: #222222;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -24,14 +24,15 @@ div.main-2{
 p.page-title{
     font-size: clamp(50px, 5vw, 80px);
     font-family: 'dystopian', serif;
-    color: #222222;
+    color: antiquewhite;
     text-align: center;
+    margin-top: clamp(100px, 15vw, 200px);
 }
 p.page-subtitle{
     font-size: clamp(10px, 3vw, 30px);
     font-family: 'nasalization', serif;
     text-align: center;
-    color: #424242;
+    color: gray;
 }
 /*85:50*/
 div.profile{
@@ -70,10 +71,10 @@ div.profile::before{
     translate: -50% -50%;
     z-index: 2;
     transition: 0.3s all ease-in-out;
-    background: radial-gradient(500px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.5), transparent 40%);
+    background: radial-gradient(500px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.5), transparent 60%);
 }
 div.profile{
-    filter: drop-shadow(calc(-0.1 * var(--mouse-x)) calc(0.1 * var(--mouse-y)) 10px rgba(0, 0, 0, 0.4));
+    filter: drop-shadow(calc(-0.1 * var(--mouse-x)) calc(0.1 * var(--mouse-y)) 10px rgba(0, 0, 0, 0.6));
 }
 div.profile:hover::before{
     opacity: 1;
@@ -130,15 +131,9 @@ p.year{
 
 /*MAIN II*/
 p.section-title{
-    font-size: clamp(28px, 4vw, 48px);
+    font-size: clamp(40px, 4vw, 50px);
     font-family: 'dystopian', serif;
     color: #222222;
-    text-align: center;
-}
-p.section-subtitle{
-    font-size: clamp(10px, 3vw, 30px);
-    font-family: 'dystopian', serif;
-    color: gray;
     text-align: center;
 }
 div.content{

@@ -1,3 +1,6 @@
+function openLink(url){
+    window.open(url, '_blank')
+}
 function toggleNav() {
     let navigation_bar = document.getElementById("navigation-bar");
     navigation_bar.className += " expand"
