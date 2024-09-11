@@ -35,6 +35,38 @@ function handleMouseLeave(event){
         target.style.transform = `rotateY(0deg) rotateX(0deg)`
     }, 200)
 }
+// Clock
+function getDate(){
+    const date = new Date();
+    const day = date.getDate();
+    const month = date.toLocaleString('default', { month: 'long' });
+    function getOrdinalSuffix(day) {
+        if (day > 3 && day < 21) return 'th';
+        switch (day % 10) {
+            case 1: return 'st';
+            case 2: return 'nd';
+            case 3: return 'rd';
+            default: return 'th';
+        }
+    }
+    return `${month} ${day}${getOrdinalSuffix(day)}`;
+}
+function getTime() {
+    const date = new Date();
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    const seconds = String(date.getSeconds()).padStart(2, '0');
+    return `${hours}:${minutes}:${seconds}`;
+}
+function displayTime(){
+    const date = document.getElementById('clock-date');
+    const time = document.getElementById('clock-time');
+    setInterval(() => {
+        date.innerHTML = getDate()
+        time.innerHTML = getTime();
+    }, 1000);
+}
+
 
 
 
