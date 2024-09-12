@@ -5,6 +5,7 @@ div.main-1{
     width: 100%;
     /*background: linear-gradient(180deg, #222222);*/
     background-color: #222222;
+    /*background: url("https://wallpapers.com/images/hd/black-texture-wooden-surface-f73lgop4iivovs7s.jpg");*/
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -295,6 +296,7 @@ div.clock{
     max-width: 595px;
     min-width: 255px;
     border-radius: 8px;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.1));
 }
 div.clock-date{
     width: 85vw;
