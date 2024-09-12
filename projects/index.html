@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="author" content="Linyun Liu"/>
+  <meta name="theme-color" content="#222222">
+  <link rel="shortcut icon" href="../icon.png"/>
+  <link rel="stylesheet" type="text/css" href="../base.css"/>
+  <title>Projects</title>
+  <script>
+    function toggleNav() {
+      let navigation_bar = document.getElementById("navigation-bar");
+      navigation_bar.className += " expand"
+    }
+    function closeNav(){
+      let navigation_bar = document.getElementById("navigation-bar");
+      navigation_bar.className = "navigation-bar"
+    }
+  </script>
+  <style>
+    div.grid-container {
+      columns: 3 200px;
+      column-gap: 1.5rem;
+      width: 100%;
+      transition: all .25s ease-in-out;
+      padding: 50px;
+    }
+    div.grid-container div {
+      font-family: Futura, "futura-pt", sans-serif;
+      margin: 0 1.5rem 1.5rem 0;
+      display: inline-block;
+      width: 100%;
+      border: solid 2px antiquewhite;
+      padding: 5px;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(8px);
+      border-radius: 8px;
+      transition: all .25s ease-in-out;
+      background-color: antiquewhite;
+    }
+    div.grid-container div:hover {
+      border-color: #12463d;
+    }
+    div.grid-container div:hover img {
+      filter: grayscale(0);
+    }
+    div.grid-container div img {
+      width: 100%;
+      filter: grayscale(100%);
+      border-radius: 8px;
+      transition: all .25s ease-in-out;
+      margin-bottom: -8px;
+    }
+    .proj_name{
+      font-family: nasalization, serif;
+      font-size: 24px;
+      overflow: auto;
+      scrollbar-width: none;
+      margin-bottom: 10px;
+      margin-top: 8px;
+      margin-left: 2px;
+    }
+    .proj_github{
+      font-size: 12px;
+      background: #000000;
+      color: #f6e9c5;
+      box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(8px);
+      border-radius: 5px;
+      border: 1px solid #000000;
+      opacity: 0;
+    }
+    div.grid-container div:hover .proj_github {
+      opacity: 100%;
+    }
+    .proj_github:hover{
+      background: #ec1752;
+      border: 1px solid #ec1752;
+      color: #f6e9c5;
+    }
+    .proj_language{
+      color: grey;
+      margin-top: 0;
+      font-style: italic;
+      overflow: scroll;
+      scrollbar-width: none;
+    }
+    .proj_date{
+      font-size: 12px;
+      margin-top: 10px;
+      margin-bottom: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="navigation-bar" id="navigation-bar">
+    <nav class="nav-links" id="nav-links">
+      <a href="https://linyunliu.com">HOME</a>
+      <a href="#" class="active">PROJECTS</a>
+      <a href="">RESUME</a>
+    </nav>
+    <a href="javascript:void(0);" class="list-icon" id="list-icon" onclick="toggleNav()"><img src="../resources/icons/list.svg" alt=""></a>
+    <a href="javascript:void(0);" class="close-icon" id="close-icon" onclick="closeNav()"><img src="../resources/icons/close.svg" alt=""></a>
+  </div>
+
+  <main>
+    <br><br><br>
+    <div class="grid-container">
+      <div>
+        <img src="https://png.pngtree.com/thumb_back/fh260/background/20230625/pngtree-stack-of-microchips-in-3d-rendering-image_3676066.jpg" alt="null">
+        <p class="proj_name">SeniorReminderDevice</p>
+        <p class="proj_language">#Python #Micro Controller #ESP32 #Physical Computing #Embeded System #Full-Stack Development #API</p>
+        <p class="proj_des">This is an ultimate reminder device that mainly reminds seniors to take
+          pills, do certain tasks, temperature, and
+          humidity. In addition, it also has an emergency button, that once pushed, will send
+          messages to family members or caregivers in case they need assistance</p>
+        <p class="proj_date">Updated on Dec 6, 2023&nbsp;&nbsp;&nbsp;
+          <a class="proj_github" href="https://linyunliu.com/PhysicalComputing/senior_reminder_device/layout">&nbsp;Demo&nbsp;</a>
+          <a class="proj_github" href="https://github.com/LinyunLiu/SeniorReminderDeviceServer">&nbsp;Server&nbsp;</a>
+          <a class="proj_github" href="https://github.com/LinyunLiu/SeniorReminderDevice">&nbsp;Interface&nbsp;</a>
+        </p>
+      </div>
+      <div>
+        <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" alt="null">
+        <p class="proj_name">iMessageChatBot</p>
+        <p class="proj_language">#Python #SQLite #API #Artifical Intelligence</p>
+        <p class="proj_des">This project integrate OpenAI API, SQLite, Python to create an automated chatbot for iMessage on Mac</p>
+        <p class="proj_date">Updated on Dec 10, 2023&nbsp;&nbsp;&nbsp;<a class="proj_github" href="https://github.com/LinyunLiu/iMessageChatBot">&nbsp;GitHub&nbsp;</a></p>
+      </div>
+      <div>
+        <img src="https://img.freepik.com/free-photo/majestic-mountain-peak-tranquil-winter-landscape-generated-by-ai_188544-15662.jpg" alt="null">
+        <p class="proj_name">AsciiArt</p>
+        <p class="proj_language">#Python</p>
+        <p class="proj_des">This python convert any images into an ascii art with colours, user can choose which ascii character to use</p>
+        <p class="proj_date">Updated on Dec 10, 2023&nbsp;&nbsp;&nbsp;<a class="proj_github" href="https://github.com/LinyunLiu/AsciiArt">&nbsp;GitHub&nbsp;</a></p>
+      </div>
+      <div>
+        <img src="https://i.redd.it/6uoazfklyo7b1.jpg" alt="null">
+        <p class="proj_name">PixelArt</p>
+        <p class="proj_language">#Python</p>
+        <p class="proj_des">This python program convert image into a pixelated art</p>
+        <p class="proj_date">Updated on Aug 20, 2023&nbsp;&nbsp;&nbsp;<a class="proj_github" href="https://github.com/LinyunLiu/PixelArt">&nbsp;GitHub&nbsp;</a></p>
+      </div>
+      <div>
+        <img src="https://www.celus.io/hubfs/Waitlist_Image_01.jpg" alt="null">
+        <p class="proj_name">Physical Computing Labs</p>
+        <p class="proj_language">#Python #Micro Controller #ESP32 #Physical Computing #Embeded System</p>
+        <p class="proj_des">Physical computing projects (using ESP32 microchip) demonstrated in a personal website</p>
+        <p class="proj_date">Updated on Dec 7, 2023&nbsp;&nbsp;&nbsp;<a class="proj_github" href="https://linyunliu.com/PhysicalComputing">&nbsp;Demo Website&nbsp;</a></p>
+      </div>
+      <div>
+        <img src="https://images5.alphacoders.com/133/1338166.png" alt="null">
+        <p class="proj_name">ColorizationVideo</p>
+        <p class="proj_language">#Python #Machine Learning</p>
+        <p class="proj_des">This python program is based on other projects I have created to colourize a black and white video using existing Machine Learning model</p>
+        <p class="proj_date">Updated on Apr 17, 2023&nbsp;&nbsp;&nbsp;<a class="proj_github" href="https://github.com/LinyunLiu/ColorizationVideo">&nbsp;GitHub&nbsp;</a></p>
+      </div>
+      <div>
+        <img src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg" alt="null">
+        <p class="proj_name">RandomNumberGenerator</p>
+        <p class="proj_language">#Rust #Python</p>
+        <p class="proj_des">This project utilizes the programming language Python and Rust to create a random number generator from scratch</p>
+        <p class="proj_date">Updated on Apr 19, 2023&nbsp;&nbsp;&nbsp;<a class="proj_github" href="https://github.com/LinyunLiu/RandomNumberGenerator">&nbsp;GitHub&nbsp;</a></p>
+      </div>
+      <div>
+        <img src="https://wallpapercave.com/wp/wp7684088.jpg" alt="null">
+        <p class="proj_name">SimpleConverter</p>
+        <p class="proj_language">#Java #JavaFX #fxml #css</p>
+        <p class="proj_des">This JavaFX application convert binary, decimal, hexadecimal digits into each other</p>
+        <p class="proj_date">Updated on Apr 17, 2023&nbsp;&nbsp;&nbsp;<a class="proj_github" href="https://github.com/LinyunLiu/SimpleConverter">&nbsp;GitHub&nbsp;</a></p>
+      </div>
+      <div>
+        <img src="https://i.redd.it/lqoa4v8oiby81.jpg" alt="null">
+        <p class="proj_name">SieveOfEratosthenes</p>
+        <p class="proj_language">#C++ #PHP</p>
+        <p class="proj_des">Finding Primes Numbers Using Sieve of Eratosthenes Algorithm</p>
+        <p class="proj_date">Updated on Apr 17, 2023&nbsp;&nbsp;&nbsp;<a class="proj_github" href="https://github.com/LinyunLiu/SieveOfEratosthenes">&nbsp;GitHub&nbsp;</a></p>
+      </div>
+      <div>
+        <img src="https://www.creativefabrica.com/wp-content/uploads/2023/07/18/Cyberpunk-City-Street-Scifi-Wallpaper-Graphics-74865888-1.jpg" alt="null">
+        <p class="proj_name">StudentUtilities</p>
+        <p class="proj_language">#html #css #JavaScript #API</p>
+        <p class="proj_des">This web programming project aims to develop a utility webpage for university students</p>
+        <p class="proj_date">Updated on Apr 24, 2023&nbsp;&nbsp;&nbsp;<a class="proj_github" href="https://github.com/LinyunLiu/StudentUtilities">&nbsp;GitHub&nbsp;</a></p>
+      </div>
+      <div>
+        <img src="https://149359637.v2.pressablecdn.com/wp-content/uploads/2022/06/Jungle-Leaf-Wallpaper-About-Murals.jpeg" alt="null">
+        <p class="proj_name">Bioinformatics</p>
+        <p class="proj_language">#Shell #Java #Python #Batchfile # Google Cloud #Cloud Computing</p>
+        <p class="proj_des">To construct phylogenetic tree from protein clusters using maximum likelihood method to reveal evolutionary relationship between Saccharomyces Cerevisiae, Schizosaccharomyces Pombe and other Fungi species</p>
+        <p class="proj_date">Updated on Apr 17, 2023&nbsp;&nbsp;&nbsp;<a class="proj_github" href="https://github.com/LinyunLiu/Bioinformatics">&nbsp;GitHub&nbsp;</a></p>
+      </div>
+      <div>
+        <img src="https://wallpapers.com/images/featured/beautiful-3vau5vtfa3qn7k8v.jpg" alt="null">
+        <p class="proj_name">SimpleTasklistGUI</p>
+        <p class="proj_language">#Java #JavaFX #fxml #css</p>
+        <p class="proj_des">This is a JavaFX to-do list application </p>
+        <p class="proj_date">Updated on Apr 17, 2023&nbsp;&nbsp;&nbsp;<a class="proj_github" href="https://github.com/LinyunLiu/SimpleTasklistGUI">&nbsp;GitHub&nbsp;</a></p>
+      </div>
+      <div>
+        <img src="https://images6.alphacoders.com/134/1345836.png" alt="null">
+        <p class="proj_name">Sudoku</p>
+        <p class="proj_language">#Ruby</p>
+        <p class="proj_des">A terminal Sudoku game written in Ruby</p>
+        <p class="proj_date">Updated on Apr 17, 2023&nbsp;&nbsp;&nbsp;<a class="proj_github" href="https://github.com/LinyunLiu/Sudoku">&nbsp;GitHub&nbsp;</a></p>
+      </div>
+      <div>
+        <img src="https://www.joberty.com/blog/content/images/2023/09/software-engineer.png" alt="null">
+        <p class="proj_name">CourseScheduler</p>
+        <p class="proj_language">#Java #JavaFX #DBMS #Softwaer Engineering #Windows </p>
+        <p class="proj_des">A team software engineering project that aims to improve course choosing process at
+          Trinity Western University, to help make the user experience more intuitive, more convenient</p>
+        <p class="proj_date">Updated on May 1, 2023&nbsp;&nbsp;&nbsp;<a class="proj_github" href="https://github.com/CA-JunPark/Course-Schedular">&nbsp;GitHub&nbsp;</a></p>
+      </div>
+      <div>
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/022/460/209/small_2x/a-computer-desktop-wallpaper-for-forex-trading-terminal-ai-generative-desktop-background-free-photo.jpg" alt="null">
+        <p class="proj_name">Remedentia</p>
+        <p class="proj_language">#C sharp #Unity #Android #API #Softwaer Engineering #apk</p>
+        <p class="proj_des">Remedentia is an musical therapy app that helps patients with dementia. This team software engineering
+          project aims to make a useful app that caregivers, or professionals can easily use to perform musical therapy to dementia patient.
+          It can record patients' reaction, mood, etc. In addition, the caregivers can also take notes about a specific patient. The notes can be exported to PDFs</p>
+        <p class="proj_date">Updated on 2022&nbsp;&nbsp;&nbsp;<a class="proj_github" href="https://gitlab.com/twu8/2022-3-cmpt385-04/-/tree/Sprint_3_final?ref_type=heads">&nbsp;GitLab&nbsp;</a></p>
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>
