@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="author" content="Linyun Liu"/>
+  <meta name="theme-color" content="black">
+  <link rel="shortcut icon" href="../icon.png"/>
+  <link rel="stylesheet" type="text/css" href="../base.css"/>
+  <title>Films</title>
+  <script>
+    function toggleNav() {
+      let navigation_bar = document.getElementById("navigation-bar");
+      navigation_bar.className += " expand"
+    }
+    function closeNav(){
+      let navigation_bar = document.getElementById("navigation-bar");
+      navigation_bar.className = "navigation-bar"
+    }
+    function openVideo(url){
+      window.open(url)
+    }
+    function loadVideo(){
+      const video = document.getElementById("demo-video");
+      video.currentTime = 12;
+    }
+  </script>
+  <style>
+    div.navigation-bar {
+      background-color: black;
+    }
+    body{
+      background-color: #222222;
+    }
+    div.footer{
+      width: 100%;
+      background-color: black;
+      height: 100px;
+      color: lightcoral;
+      justify-content: center;
+      align-items: center;
+      font-family: 'nasalization', serif;
+      text-align: center;
+      padding: 0;
+      font-size: 12px;
+    }
+    div.footer p{
+      margin-top: 60px;
+    }
+    div.footer img{
+      width: 12px;
+    }
+    div.middle-1{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      background-color: black;
+    }
+    div.middle-1 div{
+      width: 4vw;
+      height: 30px;
+      background-color: black;
+      transform: translateY(15px);
+    }
+    div.middle-4{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+    div.middle-4 div{
+      width: 4vw;
+      height: 30px;
+      background-color: black;
+      transform: translateY(15px);
+    }
+
+    /*SKILLS*/
+    div.skills{
+      width: 100%;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+    }
+    div.skills-content{
+      width: 85vw;
+      max-width: 1200px;
+      margin-top: clamp(80px, 15vw, 140px);
+      margin-bottom: 50px;
+      color: antiquewhite;
+      font-family: nasalization, serif;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    div.skills-content div{
+      margin-bottom: 20px;
+    }
+    video{
+      width: 85vw;
+      max-width: 600px;
+      margin-top: -20px;
+    }
+    div.skills-content p{
+      margin-bottom: 5px;
+    }
+    div.skills-content p.skills-title{
+      font-family: dystopian, serif;
+      font-size: clamp(14px, 10vw, 40px);
+      color: antiquewhite;
+      margin-bottom: 10px;
+    }
+
+    /*EDUCATION*/
+    div.films{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    div.films-content{
+      width: 85vw;
+      max-width: 1200px;
+      margin-top: 80px;
+      margin-bottom: 50px;
+      color: antiquewhite;
+      font-family: nasalization, serif;
+    }
+    div.films-content p{
+      margin-bottom: 5px;
+    }
+    div.films-content p.films-title{
+      font-family: dystopian, serif;
+      font-size: clamp(14px, 10vw, 40px);
+      background: linear-gradient(90deg, lightcoral, yellow);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+    img{
+      width: clamp(14px, 10vw, 30px);
+      margin-right: 5px;
+      transform: translateY(3px);
+    }
+    button{
+      cursor: pointer;
+      width: 200px;
+      height: 50px;
+      background-color: #222222;
+      border: 1px solid #222222;
+      border-radius: 12px;
+      color: antiquewhite;
+      font-family: nasalization, serif;
+      font-size: 18px;
+      transition: 0.3s all ease-in-out;
+    }
+    button:hover{
+      transform: scale(1.02);
+    }
+    div.grid-container {
+      columns: 3 300px;
+      column-gap: 1.5rem;
+      width: 100%;
+      transition: all .25s ease-in-out;
+      padding: 0;
+    }
+    div.grid-container div {
+      cursor: pointer;
+      margin: 0 1.5rem 1.5rem 0;
+      display: inline-block;
+      width: 100%;
+      border: 1px dashed dimgray;
+      padding: 0 2px 10px 2px;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(8px);
+      border-radius: 8px;
+      transition: all .25s ease-in-out;
+      background-color: #2d2d2d;
+      position: relative;
+    }
+    p.year{
+      position: absolute;
+      left: 8px;
+    }
+    div.grid-container div:hover {
+      border-color: #f6ab68;
+    }
+    div.grid-container div:hover img {
+      filter: grayscale(0);
+    }
+    div.grid-container div img {
+      width: 100%;
+      filter: grayscale(100%);
+      border-radius: 8px;
+      transition: all .25s ease-in-out;
+    }
+    .proj_name{
+      font-family: nasalization, serif;
+      font-size: 24px;
+      overflow: auto;
+      scrollbar-width: none;
+      margin-bottom: 10px;
+      margin-top: 8px;
+      margin-left: 5px;
+      color: #f6ab68;
+    }
+    .proj_des{
+      color: darkgray;
+      margin-left: 5px;
+      margin-right: 5px;
+      font-family: nasalization, serif;
+      font-size: 14px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body onload="loadVideo()">
+<div class="navigation-bar" id="navigation-bar">
+  <nav class="nav-links" id="nav-links">
+    <a href="https://linyunliu.com">HOME</a>
+    <a href="https://linyunliu.com/projects">PROJECTS</a>
+    <a href="https://linyunliu.com/resume">RESUME</a>
+    <a href="#" class="active" style="color: lightcoral">FILMS</a>
+  </nav>
+  <a href="javascript:void(0);" class="list-icon" id="list-icon" onclick="toggleNav()"><img src="../resources/icons/list.svg" alt=""></a>
+  <a href="javascript:void(0);" class="close-icon" id="close-icon" onclick="closeNav()"><img src="../resources/icons/close.svg" alt=""></a>
+</div>
+<main>
+  <div class="skills">
+    <div class="skills-content">
+      <div>
+        <p class="skills-title"><img alt="" src="../resources/icons/camera.svg"> SKILLS</p>
+        <p>&#8226; Cinematography, Photography</p>
+        <p>&#8226; Digital Post-Production</p>
+        <p>&#8226; Digital Recording</p>
+        <p>&#8226; Screenwriting, Film History</p>
+        <p>&#8226; <span style="background: linear-gradient(90deg, #ffd479, #ff7e79, #0096ff);
+                                -webkit-background-clip: text;
+                                 -webkit-text-fill-color: transparent;">Final Cut Pro</span>,
+                    <span style="color: lightseagreen">Adobe Premiere Pro</span></p>
+        <p>&#8226; Adobe After Effects</p>
+        <p>&#8226; Logic Pro</p>
+        <p>&#8226; Fine Arts</p>
+      </div>
+      <video id="demo-video" src="demo.mp4" autoplay muted loop></video>
+    </div>
+  </div>
+  <div class="middle-1">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="films">
+    <div class="films-content">
+      <p class="films-title"><img alt="" src="../resources/icons/film.svg"> FILM PROJECT DEMOS</p>
+      <br>
+      <div class="grid-container">
+        <div onclick="openVideo('https://www.youtube.com/watch?v=r0m-h_XWjc8')">
+          <img src="img/1.jpg" alt="null">
+          <p class="proj_name">This Future of Mine</p>
+          <p class="proj_des">What if there is an A.I. that predicts your future?</p>
+          <p class="year" style="color: #ffd479cc;">2024</p>
+        </div>
+        <div onclick="openVideo('https://drive.google.com/file/d/1gdpxd9BRl5zXa4kIoqMgyp08U014PpAO/view?usp=share_link')">
+          <img src="img/2.jpg" alt="null">
+          <p class="proj_name">Police Body Camera</p>
+          <p class="proj_des">Completed promotional video for my internship at Safe Fleet</p>
+          <p class="year" style="color: #ffd479cc;">2023</p>
+        </div>
+        <div onclick="openVideo('https://www.youtube.com/watch?v=UEfpOOmmTWc')">
+          <img src="img/3.jpg" alt="null">
+          <p class="proj_name">The Gold</p>
+          <p class="proj_des">You never know what will people do to get what they want</p>
+          <p class="year" style="color: #ffd479cc;">2021</p>
+        </div>
+        <div onclick="openVideo('https://www.youtube.com/watch?v=KsjXYOoWTKE')">
+          <img src="img/4.jpg" alt="null">
+          <p class="proj_name">We are Nerds</p>
+          <p class="proj_des">A documentary about computer programmers</p>
+          <p class="year" style="color: #ffd479cc;">2021</p>
+        </div>
+        <div onclick="openVideo('https://www.youtube.com/watch?v=el4sFhCAeBE')">
+          <img src="img/5.jpg" alt="null">
+          <p class="proj_name">Good Will Hunting?</p>
+          <p class="proj_des">A cover/remake short video of one of the scenes in Good Will Hunting</p>
+          <p class="year" style="color: #ffd479cc;">2021</p>
+        </div>
+        <div onclick="openVideo('https://www.youtube.com/watch?v=0V5B0tCpbUQ')">
+          <img src="img/6.jpg" alt="null">
+          <p class="proj_name">A Dancing Video</p>
+          <p class="proj_des">A music dancing video with some simple stunts</p>
+          <p class="year" style="color: #ffd479cc;">2021</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="middle-4">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="footer">
+    <p>2024 | Linyun Liu &nbsp;<img src="../resources/icons/check.svg" alt="" style="transform: translateY(2px)"></p>
+  </div>
+</main>
+
+</body>
+</html>
