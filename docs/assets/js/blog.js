@@ -23,7 +23,7 @@ function formatDate(isoString) {
 }
 
 function getData() {
-    fetch("/docs/assets/meta/blog.json")
+    fetch("/assets/meta/blog.json")
         .then(res => res.json())
         .then(data => {
             limit = data["limit_per_page"]

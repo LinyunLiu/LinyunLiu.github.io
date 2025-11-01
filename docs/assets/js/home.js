@@ -41,7 +41,7 @@ window.addEventListener("scroll", () => {
 function getMeta() {
     toggleBlogLoader(true)
     toggleProjLoader(true);
-    fetch("/docs/assets/meta/home.json")
+    fetch("/assets/meta/home.json")
         .then(res => res.json())
         .then(data => {
             load(data)
