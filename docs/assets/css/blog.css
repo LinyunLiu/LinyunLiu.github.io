@@ -1,0 +1,214 @@
+div.section-1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border: 1px dashed var(--dark);
+    padding: 4vw;
+    margin-top: 50px;
+    min-height: 800px;
+}
+form.search-bar{
+    position: relative;
+    width: calc(70% - 15px);
+    max-width: 800px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: stretch;
+}
+i.bi-search{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    color: dimgray;
+}
+form.search-bar input{
+    width: 100%;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    padding: 5px 40px;
+    height: 35px;
+    color: var(--dark);
+    border: 1px solid #22222250;
+    background: #22222208;
+    border-radius: 1px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+form.search-bar input:focus {
+    box-shadow: 0 0 0 2px #22222230;
+}
+form.search-bar button{
+    font-family: "Fjalla One", sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px 30px;
+    border: none;
+    background-color: var(--dark);
+    color: var(--light);
+}
+div.search-result{
+    width: calc(100% - 117px);
+    border: 1px solid #22222230;
+    height: 40vw;
+    max-height: 500px;
+    min-height: 300px;
+    position: absolute;
+    top: 46px;
+    flex-direction: column;
+    background-color: whitesmoke;
+    padding: 5px;
+    display: none;
+    overflow: scroll;
+    z-index: 900;
+}
+hr{
+    border: none;          /* remove default border */
+    border-top: 1px solid #22222250;  /* set color and thickness */
+    height: 0;             /* optional */
+    width: 100%;
+}
+a.search-result-item{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--dark);
+}
+a.search-result-item:hover{
+    background-color: #22222210
+}
+p.search-result-item-title{
+    font-family: "Fjalla One", sans-serif;
+    font-size: 18px;
+}
+p.search-result-item-description{
+    font-family: "Ubuntu", sans-serif;
+    font-size: 14px;
+    display: -webkit-box;           /* required for multi-line ellipsis */
+    -webkit-box-orient: vertical;   /* vertical stacking */
+    -webkit-line-clamp: 2;          /* number of lines to show */
+    overflow: hidden;               /* hide overflowing text */
+    text-overflow: ellipsis;        /* optional, for consistency */
+}
+div.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    max-width: 800px;
+    gap: 30px;
+}
+a.grid-item {
+    width: 100%;
+    text-decoration: none;
+    padding: 5px;
+    border-left: 2px solid transparent; /* no left border initially */
+    transition: border-left, background-color 0.3s ease-in-out; /* smooth animation */
+}
+a.grid-item:hover{
+    border-left: 2px solid var(--dark);
+    background-color: var(--light-2);
+}
+p.project-title{
+    color: var(--dark);
+    font-family: "Fjalla One", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    display: -webkit-box;           /* required for multi-line ellipsis */
+    -webkit-box-orient: vertical;   /* vertical stacking */
+    -webkit-line-clamp: 1;          /* number of lines to show */
+    overflow: hidden;               /* hide overflowing text */
+    text-overflow: ellipsis;        /* optional, for consistency */
+}
+p.project-keywords{
+    color: var(--dark);
+    font-family: "Ubuntu", sans-serif;
+    font-size: 14px;
+    display: -webkit-box;           /* required for multi-line ellipsis */
+    -webkit-box-orient: vertical;   /* vertical stacking */
+    -webkit-line-clamp: 1;          /* number of lines to show */
+    overflow: hidden;               /* hide overflowing text */
+    text-overflow: ellipsis;        /* optional, for consistency */
+}
+p.project-description{
+    color: var(--dark);
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    margin-top: 5px;
+    display: -webkit-box;           /* required for multi-line ellipsis */
+    -webkit-box-orient: vertical;   /* vertical stacking */
+    -webkit-line-clamp: 3;          /* number of lines to show */
+    overflow: hidden;               /* hide overflowing text */
+    text-overflow: ellipsis;        /* optional, for consistency */
+}
+p.project-date{
+    color: dimgray;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 14px;
+    margin-top: 5px;
+}
+div.pagination-control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-direction: row;
+    margin-top: 50px;
+}
+div.pagination-control button{
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid transparent;
+    font-size: 16px;
+    font-family: "Fjalla One", sans-serif;
+}
+button.prev-btn, button.next-btn{
+    background-color: var(--dark);
+    width: 60px;
+    height: 40px;
+    color: var(--light);
+}
+div.pages{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+div.pages button{
+    width: 40px;
+    height: 40px;
+    background-color: #22222230;
+}
+p.pages-simple{
+    color: var(--dark);
+    font-family: "Fjalla One", sans-serif;
+    font-size: 20px;
+    display: none;
+    letter-spacing: 3px;
+    position: relative;
+}
+@media (max-width: 600px) {
+    a.grid-item {
+        width: 100%;
+    }
+    form.search-bar{
+        width: calc(100% - 15px);
+    }
+    div.projects{
+        width: 100%;
+    }
+    div.pages{
+        display: none;
+    }
+    p.pages-simple{
+        display: block;
+    }
+}
