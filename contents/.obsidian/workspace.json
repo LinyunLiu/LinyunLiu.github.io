@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "e3f2c2cb3b047a8f",
+        "id": "634ed6d515c615a5",
         "type": "tabs",
         "children": [
           {
-            "id": "847b9d05cb0774ad",
+            "id": "9397566bd2b11f03",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "blogs/This is another post.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "This is another post"
+              "title": "New tab"
             }
           }
         ]
@@ -94,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "blogs/This is another post.md",
+                "file": "Films.base",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +100,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for This is another post"
+              "title": "Backlinks for Films"
             }
           },
           {
@@ -113,12 +109,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "blogs/This is another post.md",
+                "file": "Films.base",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from This is another post"
+              "title": "Outgoing links from Films"
             }
           },
           {
@@ -142,13 +138,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blogs/This is another post.md",
+                "file": "Films.base",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of This is another post"
+              "title": "Outline of Films"
             }
           },
           {
@@ -179,11 +175,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "847b9d05cb0774ad",
+  "active": "f2481e8c86a80bd3",
   "lastOpenFiles": [
+    "Projects.base",
+    "Films.base",
+    "blogs/This is another post.md",
     "blogs/Convert an Image into Colourful Ascii Art.md",
     "Blogs.base",
-    "blogs/This is another post.md",
     "assets/imgs/blog-cover-1.jpg",
     "assets/imgs",
     "assets/cover-image.md",

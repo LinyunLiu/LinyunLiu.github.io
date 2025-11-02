@@ -45,7 +45,7 @@ function getMeta() {
         .then(res => res.json())
         .then(data => {
             setTimeout(()=> {
-                loadBlogs(data['blogs'])
+                loadBlogs(data['items'])
                 toggleBlogLoader(false)
             }, 100);
         })
@@ -57,7 +57,7 @@ function getMeta() {
         .then(res => res.json())
         .then(data => {
             setTimeout(()=> {
-                loadProjects(data['projects'])
+                loadProjects(data['items'])
                 toggleProjLoader(false);
             }, 100);
         })
@@ -68,17 +68,28 @@ function getMeta() {
 }
 
 function loadBlogs(blogs) {
+    blogs.sort((a, b) => new Date(b.date) - new Date(a.date));
+    let limit = 0
     for (let b of blogs) {
+        if (limit === 3){
+            break;
+        }
         recentBlog.innerHTML += `
         <a href="${b['link']}">
             <p class="blog-title">${b['title']}</p>
             <p class="blog-description">${b['description']}</p>
         </a>`
+        limit ++;
     }
 }
 
 function loadProjects(projs) {
+    let limit = 0
+    projs.sort((a, b) => new Date(b.date) - new Date(a.date));
     for (let p of projs) {
+        if (limit === 6){
+            break;
+        }
         let s = p['keywords'].map(k => `#${k}`).join(', ');
         projects.innerHTML += `
         <a class="grid-item" href="${p['link']}">
@@ -87,6 +98,7 @@ function loadProjects(projs) {
             <p class="project-keywords">${s}</p>
             <p class="project-description">${p['description']}</p>
         </a>`
+        limit ++;
     }
 }
 

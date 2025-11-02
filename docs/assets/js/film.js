@@ -11,7 +11,8 @@ function getData() {
         .then(res => res.json())
         .then(data => {
             limit = data["limit_per_page"]
-            projects = data["projects"]
+            projects = data["items"]
+            projects.sort((a, b) => new Date(b.date) - new Date(a.date));
             total = projects.length
             let html = "";
             for (let i = 1; i <= Math.ceil(total / limit); i++) {
