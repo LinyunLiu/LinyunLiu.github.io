@@ -1,0 +1,15 @@
+views:
+  - type: cards
+    name: Blogs
+    filters:
+      and:
+        - file.folder == "blogs"
+    order:
+      - file.name
+      - date
+    sort:
+      - property: date
+        direction: DESC
+    image: note.cover
+    imageAspectRatio: 0.65
+    cardSize: 250
