@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#222222">
+    <meta name="author" content="Linyun Liu"/>
+    <meta name="description" content="A step-by-step guide on generating ASCII art from images using Python"/>
+    <meta name="keywords" content="python, art"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="assets/imgs/mango.png">
+    <link rel="stylesheet" type="text/css" href="assets/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/blog-post.css"/>
+    <script src="assets/js/base.js" defer></script>
+    <script src="assets/js/blog-post.js" defer></script>
+    <title>Blog | This is a test 10-31</title>
+</head>
+<body>
+<nav class="nav-bar" id="nav-bar">
+    <p class="nav-bar-title">P</p>
+    <a href="/">HOME</a>
+    <a href="/projects">PROJECT</a>
+    <a href="/films">FILM</a>
+    <a href="/blogs" class="active">BLOG</a>
+    <i class="bi bi-list" id="nav-list-btn" onclick="toggleNav(true)"></i>
+    <i class="bi bi-x-lg" id="nav-close-btn" onclick="toggleNav(false)"></i>
+</nav>
+<main>
+    <div class="blog-post">
+        <div class="blog-post-content">
+            <p><img src="assets/imgs/blog-cover-1.jpg" alt="image"></p>
+<h2>Introduction</h2>
+<p>All the images we see on a screen are made up of tiny units called pixels. These pixels are usually so small that they&#39;re invisible to the human eye. But what if we could read each individual pixel and translate it into an ASCII character? By doing this, we can recreate an image in a unique, text-based style—where each character acts as a stand-in for a pixel. Of course, everything on screen is still rendered with RGB pixels in the end, but this transformation gives the image a distinctive and stylish look.</p>
+<blockquote>
+<p>This is a quote example</p>
+</blockquote>
+<h2>Prerequisite</h2>
+<ol>
+<li>We will be using Python for this project, you can install it by downloading the official installer from <a href="https://python.org">this is a link</a>, or alternatively, you can install it through the terminal, platform-specific instructions are widely available online.</li>
+<li>Create a project folder and open it with VS Code or your preferred code editor</li>
+<li>Initiate a virtual environment in your terminal (recommended). Run <code>python3 -m venv env</code> to add the environment, and then we can run <code>source env/bin/activate</code> to activate it. On windows, you need to type in <code>.\env\Scripts\activate</code> instead.</li>
+</ol>
+<h3>Look at this video</h3>
+<iframe
+  src="https://www.youtube.com/embed/rELhF5GFcII"
+  title="video player"
+  frameborder="0"
+  allowfullscreen>
+</iframe>
+
+<h2>The libraries</h2>
+<p><strong>Pillow</strong>: Pillow is a Python library for image processing. It&#39;s a modern fork of the original PIL (Python Imaging Library), maintained and more feature-rich. And we can do a lot with this powerful library: </p>
+<ul>
+<li>Open and display images.</li>
+<li><em>Access and manipulate individual pixels</em> (This is what we will be using)</li>
+<li>Convert between formats (e.g., PNG to JPEG).</li>
+<li>Resize, crop, rotate, flip, and filter images.</li>
+<li>Draw text or shapes on images.</li>
+<li>Apply effects like blur, contrast, sharpen.</li>
+</ul>
+<p><strong>Rich</strong>:  <del>A Python library for beautiful formatting in the terminal. It supports:</del></p>
+<ul>
+<li><em>Coloured text</em></li>
+<li>Progress bars</li>
+<li>Tables</li>
+<li>Markdown</li>
+<li>Syntax highlighting</li>
+<li>Tracebacks (better error display)</li>
+</ul>
+<p>==Combine these two library we can make our idea come true, Let&#39;s get started!==</p>
+<h2>Basic Idea</h2>
+<p>We use the Pillow library to read an image and extract the RGB values of each pixel. With this information, we can print ASCII characters in the corresponding colours to recreate the image. However, images typically contain hundreds or even thousands of pixels, making it impractical to render each one as a separate character. The terminal window, or even the entire screen, wouldn’t be large enough to display them all, and doing so would significantly impact performance. To address this, we <strong>divide the image into a grid</strong> (as shown below) and <strong>use an ASCII character to represent each cell</strong>, effectively compressing the visual data while preserving the overall structure.</p>
+<h2>Create a Converter Class</h2>
+<table>
+<thead>
+<tr>
+<th>Libraries</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>pixels</td>
+<td>an array containing all the pixels of the image; each pixel represents an RGB value (Red, Green, Blue) accessible by index.</td>
+</tr>
+<tr>
+<td>width, height</td>
+<td>the dimensions of the image in pixels (for example, 1080p × 720p).</td>
+</tr>
+<tr>
+<td>square_size</td>
+<td>the width and height (in pixels) of each square in our grid, your decision</td>
+</tr>
+<tr>
+<td>data</td>
+<td>a 2D array used to temporarily store squares with each one containing all the pixels within that square.</td>
+</tr>
+</tbody></table>
+<pre><code class="language-python">from PIL import Image
+from rich.console import Console 
+
+class AsciiArtConverter:
+    def __init__(self, image_path, square_size, char):
+        self.image = Image.open(image_path)
+        self.pixels = self.image.load()
+        self.width, self.height = self.image.size
+        self.square_size = square_size
+        self.W = self.width // self.square_size
+        self.H = self.height // self.square_size
+        self.data = []
+        self.new_data = []
+        self.char = char
+</code></pre>
+
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer-minimize-btn"></div>
+    <div class="footer-content">
+        <div class="nav-logo">
+            <p class="footer-subtitle clock" id="clock">00:00:00</p>
+            <img alt="" src="assets/imgs/mango.png"/>
+        </div>
+        <div class="nav-links">
+            <p class="footer-subtitle">LINKS</p>
+            <a href="/">HOME</a>
+            <a href="/projects">PROJECT</a>
+            <a href="/films">FILM</a>
+            <a href="/blogs">BLOG</a>
+        </div>
+        <div class="social-links">
+            <p class="footer-subtitle">Social</p>
+            <a href="https://github.com/LinyunLiu"><i class="bi bi-github"></i>&nbsp;&nbsp;GITHUB</a>
+            <a href="https://www.linkedin.com/in/linyun-liu-2a4b05240/"><i class="bi bi-linkedin"></i>&nbsp;&nbsp;LINKEDIN</a>
+            <a href="https://www.instagram.com/linyunliu42/"><i class="bi bi-instagram"></i>&nbsp;&nbsp;INSTAGRAM</a>
+            <a href="mailto:linyunliu574@gmail.com"><i class="bi bi-envelope-fill"></i>&nbsp;&nbsp;EMAIL</a>
+        </div>
+    </div>
+    <div class="footer-note">
+        <p>少しの勇気と想像力</p>
+    </div>
+    <p class="footer-name">LINYUN</p>
+</footer>
+</body>
+</html>

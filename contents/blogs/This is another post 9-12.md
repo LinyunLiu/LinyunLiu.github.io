@@ -1,18 +1,17 @@
 ---
-title: Convert an Image into Colourful Ascii Art
+title: This is another post
 description: A step-by-step guide on generating ASCII art from images using Python
-cover: /assets/imgs/blog-cover-1.jpg
+cover: assets/imgs/blog-cover-1.jpg
 author: Linyun Liu
 keywords:
-  - ascii
   - python
   - art
 link: auto
-date: 2025-11-02
+date: 2025-09-12
 active: "true"
 ---
 
-![image](/assets/imgs/blog-cover-1.jpg)
+![image](assets/imgs/blog-cover-1.jpg)
 
 ## Introduction
 All the images we see on a screen are made up of tiny units called pixels. These pixels are usually so small that they're invisible to the human eye. But what if we could read each individual pixel and translate it into an ASCII character? By doing this, we can recreate an image in a unique, text-based style—where each character acts as a stand-in for a pixel. Of course, everything on screen is still rendered with RGB pixels in the end, but this transformation gives the image a distinctive and stylish look.
@@ -54,8 +53,6 @@ All the images we see on a screen are made up of tiny units called pixels. These
 ## Basic Idea
 We use the Pillow library to read an image and extract the RGB values of each pixel. With this information, we can print ASCII characters in the corresponding colours to recreate the image. However, images typically contain hundreds or even thousands of pixels, making it impractical to render each one as a separate character. The terminal window, or even the entire screen, wouldn’t be large enough to display them all, and doing so would significantly impact performance. To address this, we **divide the image into a grid** (as shown below) and **use an ASCII character to represent each cell**, effectively compressing the visual data while preserving the overall structure.
 
-[^1]As shown in the example image above (with enlarged grid squares for visual clarity), the main idea is to **calculate the average color of each square** and use that color for the ASCII character representing it. The concept is simple, but it does involve some basic yet slightly tricky math. As you might imagine, the final result will look “pixelated” — but that’s exactly what gives it its unique, stylish charm.
-
 ## Create a Converter Class
 
 | Libraries     | Description                                                                                                                 |
@@ -83,7 +80,3 @@ class AsciiArtConverter:
         self.char = char
 ```
 
-## Final Words
-Welcome to this very first official blog post of Alcyonite! We hope you find it clear and easy to follow. If it sparks your creativity, feel free to share it with your friends. And don’t hesitate to send us your feedback — it helps us improve and create even better content for you in the future!
-
-[^1]: This is a footnote
