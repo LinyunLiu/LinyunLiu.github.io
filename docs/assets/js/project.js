@@ -7,7 +7,7 @@ let projects = []
 let currentPage = 1
 
 function getData() {
-    fetch("/assets/meta/project.json")
+    fetch("/assets/meta/projects.json")
         .then(res => res.json())
         .then(data => {
             limit = data["limit_per_page"]

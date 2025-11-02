@@ -41,25 +41,30 @@ window.addEventListener("scroll", () => {
 function getMeta() {
     toggleBlogLoader(true)
     toggleProjLoader(true);
-    fetch("/assets/meta/home.json")
+    fetch("/assets/meta/blogs.json")
         .then(res => res.json())
         .then(data => {
-            load(data)
+            setTimeout(()=> {
+                loadBlogs(data['blogs'])
+                toggleBlogLoader(false)
+            }, 100);
         })
         .catch(err => {
             toggleBlogLoader(false)
+            console.log(err);
+        });
+    fetch("/assets/meta/projects.json")
+        .then(res => res.json())
+        .then(data => {
+            setTimeout(()=> {
+                loadProjects(data['projects'])
+                toggleProjLoader(false);
+            }, 100);
+        })
+        .catch(err => {
             toggleProjLoader(false);
             console.log(err);
         });
-}
-
-function load(data){
-    setTimeout(()=> {
-        loadBlogs(data['blogs'])
-        loadProjects(data['projects'])
-        toggleBlogLoader(false)
-        toggleProjLoader(false);
-    }, 100);
 }
 
 function loadBlogs(blogs) {
