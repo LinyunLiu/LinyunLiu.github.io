@@ -1,0 +1,27 @@
+{
+  "content_settings": {
+    "blog_folder_path": "contents/blogs",
+    "project_folder_path": "contents/projects",
+    "film_folder_path": "contents/films"
+  },
+  "publish_settings": {
+    "blog_meta_file_path": "docs/assets/meta/blogs.json",
+    "project_meta_file_path": "docs/assets/meta/projects.json",
+    "film_meta_file_path": "docs/assets/meta/films.json",
+    "blog_publish_folder_path": "docs/blogs",
+    "project_publish_folder_path": "docs/projects",
+    "film_publish_folder_path": "docs/films",
+    "default_blog_template_path": "src/templates/_default.ejs"
+  },
+  "default_properties": {
+    "title": "Please add title property",
+    "description": "Please add description property",
+    "cover": "https://cdn.wallpapersafari.com/63/56/izoh9I.jpg",
+    "author": "Linyun Liu",
+    "keywords": [],
+    "date": null,
+    "active": true,
+    "link": "https://linyunliu.com"
+  },
+  "page_item_limit": 5
+}
