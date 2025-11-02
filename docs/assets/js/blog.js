@@ -29,7 +29,7 @@ function getData() {
             limit = data["limit_per_page"]
             projects = data["items"]
             projects.sort((a, b) => new Date(b.date) - new Date(a.date));
-            projects_permanent = data["blogs"]
+            projects_permanent = data["items"]
             total = projects.length
             let html = "";
             for (let i = 1; i <= Math.ceil(total / limit); i++) {

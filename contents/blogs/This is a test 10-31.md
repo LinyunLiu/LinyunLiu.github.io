@@ -1,7 +1,7 @@
 ---
 title: This is another post
 description: A step-by-step guide on generating ASCII art from images using Python
-cover: assets/imgs/blog-cover-1.jpg
+cover: /assets/imgs/blog-cover-1.jpg
 author: Linyun Liu
 keywords:
   - python
@@ -11,7 +11,7 @@ date: 2025-10-31
 active: "true"
 ---
 
-![image](assets/imgs/blog-cover-1.jpg)
+![image](/assets/imgs/blog-cover-1.jpg)
 
 ## Introduction
 All the images we see on a screen are made up of tiny units called pixels. These pixels are usually so small that they're invisible to the human eye. But what if we could read each individual pixel and translate it into an ASCII character? By doing this, we can recreate an image in a unique, text-based style—where each character acts as a stand-in for a pixel. Of course, everything on screen is still rendered with RGB pixels in the end, but this transformation gives the image a distinctive and stylish look.

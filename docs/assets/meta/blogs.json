@@ -17,7 +17,7 @@
     {
       "title": "This is a test 10-31",
       "description": "A step-by-step guide on generating ASCII art from images using Python",
-      "cover": "assets/imgs/blog-cover-1.jpg",
+      "cover": "/assets/imgs/blog-cover-1.jpg",
       "author": "Linyun Liu",
       "keywords": [
         "python",
@@ -30,7 +30,7 @@
     {
       "title": "This is another post 9-12",
       "description": "A step-by-step guide on generating ASCII art from images using Python",
-      "cover": "assets/imgs/blog-cover-1.jpg",
+      "cover": "/assets/imgs/blog-cover-1.jpg",
       "author": "Linyun Liu",
       "keywords": [
         "python",
