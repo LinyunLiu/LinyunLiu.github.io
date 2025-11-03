@@ -4,24 +4,76 @@
     "type": "split",
     "children": [
       {
-        "id": "634ed6d515c615a5",
-        "type": "tabs",
+        "id": "48acb689e3359340",
+        "type": "split",
         "children": [
           {
-            "id": "9397566bd2b11f03",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "blogs/Convert an Image into Colourful Ascii Art.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Convert an Image into Colourful Ascii Art"
-            }
+            "id": "3c627afab233b7b3",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "757bdbda4ce8cd00",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "README.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "README"
+                }
+              }
+            ]
+          },
+          {
+            "id": "9a63e664f3fe4e8d",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "16294735bb10b049",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "terminal:terminal",
+                  "state": {
+                    "terminal:terminal": {
+                      "cwd": "/Users/linyunliu/Documents/Portfolio/contents",
+                      "focus": false,
+                      "profile": {
+                        "args": [],
+                        "executable": "/bin/zsh",
+                        "name": "",
+                        "platforms": {
+                          "darwin": true
+                        },
+                        "pythonExecutable": "python3",
+                        "restoreHistory": false,
+                        "rightClickAction": "copyPaste",
+                        "successExitCodes": [
+                          "0",
+                          "SIGINT",
+                          "SIGTERM"
+                        ],
+                        "terminalOptions": {
+                          "documentOverride": null
+                        },
+                        "type": "integrated",
+                        "useWin32Conhost": true
+                      },
+                      "serial": null
+                    }
+                  },
+                  "pinned": true,
+                  "icon": "terminal",
+                  "title": "Terminal: zsh"
+                }
+              }
+            ]
           }
-        ]
+        ],
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -176,20 +228,24 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "terminal:Open terminal": false
     }
   },
-  "active": "9397566bd2b11f03",
+  "active": "16294735bb10b049",
   "lastOpenFiles": [
+    "README.md",
+    "blogs/Convert an Image into Colourful Ascii Art.md",
+    "blogs/Untitled.md",
+    "templates/Template.md",
+    "Blogs.base",
+    "templates",
+    "Projects.base",
     "blogs/This is a test 10-31 wwww.md",
     "blogs/This is another post test.md",
-    "blogs/Convert an Image into Colourful Ascii Art.md",
     "Untitled.md",
     "流程图.canvas",
-    "README.md",
     "Films.base",
-    "Projects.base",
-    "Blogs.base",
     "assets/imgs/blog-cover-1.jpg",
     "assets/imgs",
     "assets/cover-image.md",

@@ -9,8 +9,8 @@ keywords:
   - art
 topic: Computer Science
 link: auto
-date: 2025-11-02
 active: "false"
+date: 2025-11-02
 ---
 
 ![image](assets/imgs/blog-cover-1.jpg)
