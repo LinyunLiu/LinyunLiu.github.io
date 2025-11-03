@@ -18,4 +18,6 @@ git branch       # local branches
 git branch -r    # remote branches
 git branch -a    # all branches
 
+git rm --cached .DS_Store
+
 ```
