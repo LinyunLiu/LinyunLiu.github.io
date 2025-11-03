@@ -11,10 +11,14 @@
             "id": "9397566bd2b11f03",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "blogs/Convert an Image into Colourful Ascii Art.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Convert an Image into Colourful Ascii Art"
             }
           }
         ]
@@ -175,14 +179,14 @@
       "bases:Create new base": false
     }
   },
-  "active": "f2481e8c86a80bd3",
+  "active": "9397566bd2b11f03",
   "lastOpenFiles": [
-    "流程图.canvas",
-    "Untitled.md",
-    "README.md",
-    "blogs/This is a test 10-31.md",
-    "blogs/This is another post 9-12.md",
+    "blogs/This is a test 10-31 wwww.md",
+    "blogs/This is another post test.md",
     "blogs/Convert an Image into Colourful Ascii Art.md",
+    "Untitled.md",
+    "流程图.canvas",
+    "README.md",
     "Films.base",
     "Projects.base",
     "Blogs.base",

@@ -29,6 +29,17 @@
 <main>
     <div class="blog-post">
         <div class="blog-post-content">
+            <div class="blog-header">
+                <p class="blog-title"><%- title %></p>
+                <p class="blog-description"><%- description %></p>
+                <div class="blog-keywords">
+                    <p><%- topic %></p>
+                    <% keywords_array.forEach(k => { %>
+                        <p>#<%= k %></p>
+                    <% }) %></div>
+                <p class="blog-date"><%- date %></p>
+            </div>
+            <br><br><br><br>
             <%- content %>
         </div>
     </div>

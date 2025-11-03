@@ -23,7 +23,7 @@ function formatDate(isoString) {
 }
 
 function getData() {
-    fetch("/assets/meta/blogs.json")
+    fetch("assets/meta/blogs.json")
         .then(res => res.json())
         .then(data => {
             items = data["items"]
@@ -54,7 +54,7 @@ function load(page){
         itemsContainer.innerHTML += `
         <a class="grid-item" href="${p['link']}">
             <p class="project-title">${p['title']}</p>
-            <p class="project-keywords">${s}</p>
+            <p class="project-keywords"><span class="topic">${p['topic']}</span>&nbsp;&nbsp;${s}</p>
             <p class="project-description">${p['description']}</p>
             <p class="project-date">${formatDate(p['date'])}</p>
         </a><hr>`

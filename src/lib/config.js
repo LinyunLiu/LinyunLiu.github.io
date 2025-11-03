@@ -30,6 +30,7 @@ const default_properties = {
     cover: settings['default_properties']['cover'],
     author: settings['default_properties']['author'],
     keywords: settings['default_properties']['keywords'],
+    topic: settings['default_properties']['topic'],
     date: new Date().toISOString(),
     active: settings['default_properties']['active'],
     link: settings['default_properties']['link'],

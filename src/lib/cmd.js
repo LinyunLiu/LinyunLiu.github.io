@@ -1,5 +1,6 @@
 const { content_type } = require('./config')
 const publisher = require('./publish')
+const sanitizer = require('./sanitizer')
 const chalk = require('chalk')
 
 const args = process.argv.slice(2);
@@ -13,7 +14,9 @@ ${chalk.bold('content-type:')}
   ${chalk.cyan('-film')}     publish film content
   
 ${chalk.bold('option:')}
-  ${chalk.cyan('-all')}       publish all items of the type
+  ${chalk.cyan('-all')}        publish all items of the type
+  ${chalk.cyan('-rebuild')}    republish all items of the type
+  ${chalk.cyan('-sanitize')}   sanitize meta data, redundant items of the type
   ${chalk.cyan('filename.md')} publish a single file
   ${chalk.cyan('-help')} or ${chalk.cyan('-h')} show this help message
 `;
@@ -39,9 +42,15 @@ else{
     if (!target){
         console.log(chalk.red(`please provide a target, either '-all', or 'filename.md'`));
     }
-    else if (target === '-all') {
+    else if (target === '-all' || target === '-rebuild') {
         publisher.publish_all(type);
-    } else {
+    }
+    else if (target === '-sanitize') {
+        sanitizer.sanitize_meta(type);
+        sanitizer.sanitize_publish(type);
+        console.log(chalk.green(`${type.name} contents has been sanitized!`));
+    }
+    else {
         publisher.publish(target, type);
     }
 }

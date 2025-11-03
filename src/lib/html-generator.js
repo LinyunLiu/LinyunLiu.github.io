@@ -44,10 +44,31 @@ function render_html_from_template(content, properties){
         author: properties.author,
         keywords: properties.keywords.join(', '),
         content: content,
+        date: format_date(properties.date),
+        topic: properties.topic,
+        keywords_array: properties.keywords
     })
     const publish_path = path.join(root, "docs", properties.link, "index.html");
     fs.mkdirSync(path.dirname(publish_path), { recursive: true });
     fs.writeFileSync(publish_path, page, "utf-8");
+}
+
+/**
+ * Convert am ISO8601 string into DDth MM, YYYY format
+ *
+ * @param iso_string
+ * @return {string}
+ */
+function format_date(iso_string) {
+    const date = new Date(iso_string);
+    const day = date.getDate();
+    const month = date.toLocaleString('en', { month: 'long' });
+    const year = date.getFullYear();
+    const suffix =
+        day % 10 === 1 && day !== 11 ? 'st' :
+            day % 10 === 2 && day !== 12 ? 'nd' :
+                day % 10 === 3 && day !== 13 ? 'rd' : 'th';
+    return `${day}${suffix} ${month}, ${year}`;
 }
 
 module.exports = {

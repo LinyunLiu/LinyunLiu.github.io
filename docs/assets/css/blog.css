@@ -103,7 +103,7 @@ div.projects {
     align-items: center;
     width: 70%;
     max-width: 800px;
-    gap: 30px;
+    gap: 25px;
 }
 a.grid-item {
     width: 100%;
@@ -148,11 +148,14 @@ p.project-description{
     overflow: hidden;               /* hide overflowing text */
     text-overflow: ellipsis;        /* optional, for consistency */
 }
+span.topic{
+    font-family: "Fjalla One", sans-serif;
+}
 p.project-date{
     color: dimgray;
     font-family: "Ubuntu", sans-serif;
     font-size: 14px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 div.pagination-control{
     display: flex;

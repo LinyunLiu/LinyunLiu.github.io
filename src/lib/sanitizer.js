@@ -29,10 +29,16 @@ function sanitize_meta(content_type){
         return path.basename(f, '.md');
     });
     let meta = meta_generator.get_meta(content_type);
-    meta.items = meta.items.filter(item => titles.includes(item.title));
-    meta.total = meta.items.length;
-
-    return meta;
+    let items = meta.items;
+    let updated_items = []
+    for (let i of items){
+        if (titles.includes(i.title)){
+            updated_items.push(i);
+        }
+    }
+    meta.items = updated_items;
+    meta.total = updated_items.length;
+    fs.writeFileSync(content_type.meta_file, JSON.stringify(meta, null, 2), 'utf-8');
 }
 
 /**

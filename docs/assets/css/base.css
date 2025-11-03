@@ -176,6 +176,7 @@ div.footer-content div a:hover::after {
 div.nav-logo img{
     width: 20vw;
     max-width: 140px;
+    filter: grayscale(100%);
 }
 div.footer-note{
     width: 94vw;

@@ -46,6 +46,7 @@ function get_file_properties(file_name, content_type){
         cover: properties.cover                                                || default_properties.cover,
         author: properties.author                                              || default_properties.author,
         keywords: properties.keywords                                          || default_properties.keywords,
+        topic: properties.topic                                                || default_properties.topic,
         date: properties.date                                                  || new Date().toISOString(),
         active: is_active(properties.active),
         // A link will be auto generated if the content type is "blog"
