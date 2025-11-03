@@ -1,4 +1,4 @@
-const projectContainer = document.getElementById('projects');
+const itemsContainer = document.getElementById('projects');
 const pagesContainer = document.getElementById('pages');
 const form = document.getElementById('search-bar');
 const searchResult = document.getElementById('search-result');
@@ -6,8 +6,8 @@ const searchInput = document.getElementById('search')
 
 let total = null;
 let limit = null
-let projects = []
-let projects_permanent = []
+let items = []
+let items_permanent = []
 let currentPage = 1
 
 function formatDate(isoString) {
@@ -26,11 +26,12 @@ function getData() {
     fetch("/assets/meta/blogs.json")
         .then(res => res.json())
         .then(data => {
+            items = data["items"]
+            items.sort((a, b) => new Date(b.date) - new Date(a.date));
+            items_permanent = data["items"]
+            items_permanent.sort((a, b) => new Date(b.date) - new Date(a.date));
+            total = items.length || data["total"]
             limit = data["limit_per_page"]
-            projects = data["items"]
-            projects.sort((a, b) => new Date(b.date) - new Date(a.date));
-            projects_permanent = data["items"]
-            total = projects.length
             let html = "";
             for (let i = 1; i <= Math.ceil(total / limit); i++) {
                 html += `<button onclick="load(${i})">${i}</button>`;
@@ -44,13 +45,13 @@ function getData() {
 }
 
 function load(page){
-    projectContainer.innerHTML = "";
+    itemsContainer.innerHTML = "";
     let startIndex = (page-1) * limit
-    let endIndex = Math.min(startIndex + limit, projects.length);
+    let endIndex = Math.min(startIndex + limit, items.length);
     for (let i = startIndex; i < endIndex; i++) {
-        let p = projects[i]
+        let p = items[i]
         let s = p["keywords"].map(k => `#${k}`).join(' ');
-        projectContainer.innerHTML += `
+        itemsContainer.innerHTML += `
         <a class="grid-item" href="${p['link']}">
             <p class="project-title">${p['title']}</p>
             <p class="project-keywords">${s}</p>
@@ -61,12 +62,9 @@ function load(page){
     let buttons = document.querySelectorAll('#pages button');
     buttons.forEach(btn => btn.style.border = "1px solid transparent");
     buttons[page - 1].style.border = "1px solid var(--dark)";
-
     let pagesSimple = document.getElementById("pages-simple");
     pagesSimple.innerHTML = `${page}/${Math.ceil(total / limit)}`
-
     currentPage = page;
-
 }
 
 function prevPage() {
@@ -80,7 +78,7 @@ function nextPage() {
 function search(query) {
     const words = query.trim().toLowerCase().split(/\s+/); // split by spaces
     const output = [];
-    projects_permanent.forEach(blog => {
+    items_permanent.forEach(blog => {
         const title = blog["title"].toLowerCase();
         const description = blog["description"].toLowerCase();
         const keywords = blog["keywords"].map(k => k.toLowerCase());
@@ -93,7 +91,6 @@ function search(query) {
             output.push(blog);
         }
     });
-
     return output;
 }
 
@@ -130,9 +127,8 @@ form.addEventListener('submit', function(e) {
     e.preventDefault();
     let r = search(searchInput.value);
     if (r.length > 0) {
-        projects = r;
+        items = r;
         total = projects.length
-        // build all buttons once
         let html = "";
         for (let i = 1; i <= Math.ceil(total / limit); i++) {
             html += `<button onclick="load(${i})">${i}</button>`;
