@@ -305,6 +305,9 @@ div.tv-player-actions a{
     div.intro{
         width: 100%;
     }
+    div.recent-blog-container{
+        width: 100%;
+    }
     div.recent-blog{
         width: 100%;
         padding-left: 0;
