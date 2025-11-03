@@ -1,3 +1,17 @@
 views:
-  - type: table
-    name: Table
+  - type: cards
+    name: View
+    filters:
+      and:
+        - file.folder == "films"
+    order:
+      - file.name
+      - description
+      - date
+      - link
+    sort:
+      - property: date
+        direction: DESC
+    image: note.cover
+    imageAspectRatio: 1
+    cardSize: 250

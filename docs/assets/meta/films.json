@@ -1,0 +1,87 @@
+{
+  "items": [
+    {
+      "title": "A Dancing Video",
+      "description": "A music dancing video with some simple stunts",
+      "cover": "assets/imgs/film-cover-6.jpg",
+      "author": "Linyun Liu",
+      "keywords": [
+        "dance",
+        "music"
+      ],
+      "topic": "Film",
+      "date": "2021-03-24T00:00:00.000Z",
+      "active": true,
+      "link": "https://www.youtube.com/watch?v=0V5B0tCpbUQ"
+    },
+    {
+      "title": "Good Will Hunting?",
+      "description": "A cover/remake short video of one of the scenes in Good Will Hunting",
+      "cover": "assets/imgs/film-cover-5.jpg",
+      "author": "Linyun Liu",
+      "keywords": [
+        "remake"
+      ],
+      "topic": "Film",
+      "date": "2021-03-15T00:00:00.000Z",
+      "active": true,
+      "link": "https://www.youtube.com/watch?v=el4sFhCAeBE"
+    },
+    {
+      "title": "Police Body Camera",
+      "description": "Completed promotional video for my internship at Safe Fleet",
+      "cover": "assets/imgs/film-cover-2.jpg",
+      "author": "Linyun Liu",
+      "keywords": [
+        "advertisement"
+      ],
+      "topic": "Film",
+      "date": "2023-04-01T00:00:00.000Z",
+      "active": true,
+      "link": "https://drive.google.com/file/d/1gdpxd9BRl5zXa4kIoqMgyp08U014PpAO/view?usp=share_link"
+    },
+    {
+      "title": "The Gold",
+      "description": "You never know what will people do to get what they want",
+      "cover": "assets/imgs/film-cover-3.jpg",
+      "author": "Linyun Liu",
+      "keywords": [
+        "drama"
+      ],
+      "topic": "Film",
+      "date": "2021-04-21T00:00:00.000Z",
+      "active": true,
+      "link": "https://www.youtube.com/watch?v=UEfpOOmmTWc"
+    },
+    {
+      "title": "This Future of Mine",
+      "description": "What if there is an A.I. that predicts your future?",
+      "cover": "assets/imgs/film-cover-1.jpg",
+      "author": "Linyun Liu",
+      "keywords": [
+        "sci-fi"
+      ],
+      "topic": "Film",
+      "date": "2024-01-19T00:00:00.000Z",
+      "active": true,
+      "link": "https://www.youtube.com/watch?v=r0m-h_XWjc8"
+    },
+    {
+      "title": "We are Nerds",
+      "description": "A documentary about computer programmers",
+      "cover": "assets/imgs/film-cover-4.jpg",
+      "author": "Linyun Liu",
+      "keywords": [
+        "documentary ",
+        "computer science",
+        "interviews"
+      ],
+      "topic": "Film",
+      "date": "2021-04-22T00:00:00.000Z",
+      "active": true,
+      "link": "https://www.youtube.com/watch?v=KsjXYOoWTKE"
+    }
+  ],
+  "total": 6,
+  "limit_per_page": 5
+}

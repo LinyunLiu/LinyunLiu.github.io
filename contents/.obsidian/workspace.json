@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "48acb689e3359340",
+        "id": "87f381eae9e7b112",
         "type": "split",
         "children": [
           {
@@ -28,11 +28,11 @@
             ]
           },
           {
-            "id": "9a63e664f3fe4e8d",
+            "id": "6ba54e2824218118",
             "type": "tabs",
             "children": [
               {
-                "id": "16294735bb10b049",
+                "id": "42bf691098325af0",
                 "type": "leaf",
                 "pinned": true,
                 "state": {
@@ -218,7 +218,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 274.5
+    "width": 293.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -232,8 +232,25 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "16294735bb10b049",
+  "active": "757bdbda4ce8cd00",
   "lastOpenFiles": [
+    "Films.base",
+    "films/A Dancing Video.md",
+    "films/Good Will Hunting?.md",
+    "assets/imgs/film-cover-6.jpg",
+    "films/We are Nerds.md",
+    "films/The Gold.md",
+    "films/Police Body Camera.md",
+    "films/This Future of Mine.md",
+    "assets/imgs/film-cover-5.jpg",
+    "assets/imgs/film-cover-4.jpg",
+    "assets/imgs/film-cover-3.jpg",
+    "assets/imgs/film-cover-2.jpg",
+    "assets/imgs/film-cover-1.jpg",
+    "assets/imgs/6.jpg",
+    "assets/imgs/5.jpg",
+    "assets/imgs/4.jpg",
+    "assets/imgs/3.jpg",
     "README.md",
     "blogs/Convert an Image into Colourful Ascii Art.md",
     "blogs/Untitled.md",
@@ -245,11 +262,8 @@
     "blogs/This is another post test.md",
     "Untitled.md",
     "流程图.canvas",
-    "Films.base",
-    "assets/imgs/blog-cover-1.jpg",
     "assets/imgs",
     "assets/cover-image.md",
-    "assets/blog-cover-1.jpg",
     "blogs/This is just fun.md",
     "2025-11-02.md",
     "2025-10-31.md",
