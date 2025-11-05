@@ -1,0 +1,227 @@
+{
+  "items": [
+    {
+      "title": "Alcyonite",
+      "description": "Alcyonite is a space dedicated to crafting meaningful blogs that reveals the magic of Computer Science, where inspiration begins and creativity finds its journey",
+      "cover": "https://live.staticflickr.com/7137/7701937488_5896463c22_b.jpg",
+      "author": "Linyun Liu",
+      "keywords": [
+        "full-stack",
+        "csharp",
+        "asp.net",
+        "sql",
+        "api",
+        "AI"
+      ],
+      "topic": "Computer Science",
+      "date": "2025-06-01T00:00:00.000Z",
+      "active": true,
+      "link": "https://alcyonite.com/"
+    },
+    {
+      "title": "Artism",
+      "description": "Developing a full-stack website (https://artism.life) from scratch, integrating web development technologies such as NGINX, Express.js, MySQL. Hosted on Linode Server. The site allows users to apply and submit artworks for an annual art event",
+      "cover": "https://images3.alphacoders.com/134/1341413.png",
+      "author": "Linyun Liu",
+      "keywords": [
+        "full-stack",
+        "javascript",
+        "html",
+        "css",
+        "ngnix",
+        "linode",
+        "api",
+        "sql"
+      ],
+      "topic": "Computer Science",
+      "date": "2024-09-10T00:00:00.000Z",
+      "active": true,
+      "link": "https://artism.life/"
+    },
+    {
+      "title": "Ascii Art",
+      "description": "This python convert any images into an ascii art with colours, user can choose which ascii character to use",
+      "cover": "https://img.freepik.com/free-photo/majestic-mountain-peak-tranquil-winter-landscape-generated-by-ai_188544-15662.jpg",
+      "author": "Linyun Liu",
+      "keywords": [
+        "python"
+      ],
+      "topic": "Computer Science",
+      "date": "2023-04-17T00:00:00.000Z",
+      "active": true,
+      "link": "https://github.com/LinyunLiu/AsciiArt"
+    },
+    {
+      "title": "Autonomous Rover",
+      "description": "An internship project, building an indoor autonomous rover designed to transport items between hallways and classrooms. It can be programmed with various destination goals according to user preferences.",
+      "cover": "https://png.pngtree.com/background/20230401/original/pngtree-city-%E2%80%8B%E2%80%8Bcar-futuristic-sci-fi-background-picture-image_2252269.jpg",
+      "author": "Linyun Liu",
+      "keywords": [
+        "AI",
+        "python",
+        "embeded system",
+        "raspberry pi",
+        "linux",
+        "ros2",
+        "slam",
+        "engineering"
+      ],
+      "topic": "Computer Science",
+      "date": "2024-08-30T00:00:00.000Z",
+      "active": true,
+      "link": "https://linyunliu.com/AIRobotDocumentation/"
+    },
+    {
+      "title": "Bioinformatics",
+      "description": "To construct phylogenetic tree from protein clusters using maximum likelihood method to reveal evolutionary relationship between Saccharomyces Cerevisiae, Schizosaccharomyces Pombe and other Fungi species",
+      "cover": "https://149359637.v2.pressablecdn.com/wp-content/uploads/2022/06/Jungle-Leaf-Wallpaper-About-Murals.jpeg",
+      "author": "Linyun Liu",
+      "keywords": [
+        "shell",
+        "java",
+        "python",
+        "google cloud",
+        "biology",
+        "dna"
+      ],
+      "topic": "Computer Science",
+      "date": "2023-04-17T00:00:00.000Z",
+      "active": true,
+      "link": "https://github.com/LinyunLiu/Bioinformatics"
+    },
+    {
+      "title": "Course Scheduler",
+      "description": "A team software engineering project that aims to improve course choosing process at Trinity Western University, to help make the user experience more intuitive, more convenient",
+      "cover": "https://www.joberty.com/blog/content/images/2023/09/software-engineer.png",
+      "author": "Linyun Liu",
+      "keywords": [
+        "java",
+        "java-fx",
+        "dbms",
+        "sfotware engineering",
+        "windows"
+      ],
+      "topic": "Computer Science",
+      "date": "2023-05-01T00:00:00.000Z",
+      "active": true,
+      "link": "https://github.com/CA-JunPark/Course-Schedular"
+    },
+    {
+      "title": "My Movie With Flutter",
+      "description": "An iOS app built for movie lovers who want to keep all their favourite films in one place. Developed using Flutter and Dart, the app offers a clean, user-friendly interface for organizing and managing your personal movie collection.",
+      "cover": "https://wallpapercave.com/wp/wp5556224.jpg",
+      "author": "Linyun Liu",
+      "keywords": [
+        "dart",
+        "ios",
+        "api",
+        "omdb",
+        "movie",
+        "software engineering",
+        "flutter"
+      ],
+      "topic": "Computer Science",
+      "date": "2025-08-02T00:00:00.000Z",
+      "active": true,
+      "link": "https://github.com/LinyunLiu/MyMovieWithFlutter"
+    },
+    {
+      "title": "Physical Computing Lab",
+      "description": "Physical computing projects (using ESP32 microchip) demonstrated in a personal website",
+      "cover": "https://www.celus.io/hubfs/Waitlist_Image_01.jpg",
+      "author": "Linyun Liu",
+      "keywords": [
+        "python",
+        "embeded system",
+        "esp32",
+        "micro controller"
+      ],
+      "topic": "Computer Science",
+      "date": "2023-12-07T00:00:00.000Z",
+      "active": true,
+      "link": "https://linyunliu.com/PhysicalComputing"
+    },
+    {
+      "title": "Remedentia",
+      "description": "Remedentia is an musical therapy app that helps patients with dementia. This team software engineering project aims to make a useful app that caregivers, or professionals can easily use to perform musical therapy to dementia patient. It can record patients' reaction, mood, etc. In addition, the caregivers can also take notes about a specific patient. The notes can be exported to PDFs",
+      "cover": "https://static.vecteezy.com/system/resources/thumbnails/022/460/209/small_2x/a-computer-desktop-wallpaper-for-forex-trading-terminal-ai-generative-desktop-background-free-photo.jpg",
+      "author": "Linyun Liu",
+      "keywords": [
+        "c-sharp",
+        "unity",
+        "android",
+        "api",
+        "software engineering"
+      ],
+      "topic": "Computer Science",
+      "date": "2022-01-01T00:00:00.000Z",
+      "active": true,
+      "link": "https://gitlab.com/twu8/2022-3-cmpt385-04/-/tree/Sprint_3_final?ref_type=heads"
+    },
+    {
+      "title": "Senior Reminder Device",
+      "description": "This is an ultimate reminder device that mainly reminds seniors to take pills, do certain tasks, temperature, and humidity. In addition, it also has an emergency button, that once pushed, will send messages to family members or caregivers in case they need assistance",
+      "cover": "https://png.pngtree.com/thumb_back/fh260/background/20230625/pngtree-stack-of-microchips-in-3d-rendering-image_3676066.jpg",
+      "author": "Linyun Liu",
+      "keywords": [
+        "python",
+        "esp32",
+        "full-stack",
+        "api",
+        "embeded system"
+      ],
+      "topic": "Computer Science",
+      "date": "2023-12-06T00:00:00.000Z",
+      "active": true,
+      "link": "https://linyunliu.com/PhysicalComputing/senior_reminder_device/layout"
+    },
+    {
+      "title": "Sieve Of Eratosthenes",
+      "description": "Finding Primes Numbers Using Sieve of Eratosthenes Algorithm",
+      "cover": "https://i.redd.it/lqoa4v8oiby81.jpg",
+      "author": "Linyun Liu",
+      "keywords": [
+        "c++",
+        "php",
+        "prime-numbers",
+        "sieve-of-eratosthene"
+      ],
+      "topic": "Computer Science",
+      "date": "2023-04-17T00:00:00.000Z",
+      "active": true,
+      "link": "https://github.com/LinyunLiu/SieveOfEratosthenes"
+    },
+    {
+      "title": "Video Colourization",
+      "description": "This python program is based on other projects I have created to colourize a black and white video using existing Machine Learning model",
+      "cover": "https://images5.alphacoders.com/133/1338166.png",
+      "author": "Linyun Liu",
+      "keywords": [
+        "python",
+        "machine learning"
+      ],
+      "topic": "Computer Science",
+      "date": "2023-04-17T00:00:00.000Z",
+      "active": true,
+      "link": "https://github.com/LinyunLiu/ColorizationVideo"
+    },
+    {
+      "title": "iMessage ChatBot",
+      "description": "This project integrate OpenAI API, SQLite, Python to create an automated chatbot for iMessage on Mac",
+      "cover": "https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg",
+      "author": "Linyun Liu",
+      "keywords": [
+        "python",
+        "sql-lite",
+        "api",
+        "AI"
+      ],
+      "topic": "Computer Science",
+      "date": "2023-12-10T00:00:00.000Z",
+      "active": true,
+      "link": "https://github.com/LinyunLiu/iMessageChatBot"
+    }
+  ],
+  "total": 13,
+  "limit_per_page": 6
+}
