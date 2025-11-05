@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 206.5
+    "width": 200
   },
   "right": {
     "id": "1c09c19980dc3bef",
@@ -180,7 +180,7 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "a39476d4f2717582",
+  "active": "f2481e8c86a80bd3",
   "lastOpenFiles": [
     "Blogs.base",
     "blogs/Convert Word Documents to PDF Instantly on Mac with Automator.md",

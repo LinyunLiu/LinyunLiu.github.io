@@ -23,26 +23,26 @@ If you're a Mac user, have you ever found it inconvenient that there's no quick 
 # Step 1: Open Automator & Create New Document
 Open Automator on your Mac, it’s typically found in the "Other" folder within Launchpad. Once the application launches, click the "New Document" button to get started. You’ll then be prompted to choose the type of automation you want to create.
 
-![screenshot](blog-2025-06-23-automator.webp)
+![screenshot](assets/imgs/blog-2025-06-23-automator.webp)
 # Step 2: Create A Quick Action
 In the new document window, select “Quick Action” as the type of automation. This will allow you to create a custom workflow that can be accessed directly from the Finder’s right-click menu
 
-![screenshot](blog-2025-06-23-quick-action.webp)
+![screenshot](assets/imgs/blog-2025-06-23-quick-action.webp)
 
 # Step 3: Edit Workflow
 As shown below, set the workflow to receive `files or folders` in `Finder`. You can also choose a custom icon to make your Quick Action easier to recognize
 
-![screenshot](blog-2025-06-23-workflow.webp)
+![screenshot](assets/imgs/blog-2025-06-23-workflow.webp)
 
 # Step 4: Add AppleScript
 In the search bar at the top left of the Automator window, type `AppleScript`, then drag the **Run** `AppleScript` action into the workflow panel on the right. This allows you to write a script that will take one or more .docx files as input and export them as PDFs.
 
-![screenshot](blog-2025-06-23-add-applescript.webp)
+![screenshot](assets/imgs/blog-2025-06-23-add-applescript.webp)
 
 # Step 5: Write Some AppleScript
 When this script runs, it loops through each selected files. Then, for each file, it tells Microsoft Word to open the document, export it as a PDF using Word’s built-in export feature, and close the document afterward.
 
-![screenshot](blog-2025-06-23-applescript.webp)
+![screenshot](assets/imgs/blog-2025-06-23-applescript.webp)
 ```applescript
 on run {input}
     repeat with filePath in input
