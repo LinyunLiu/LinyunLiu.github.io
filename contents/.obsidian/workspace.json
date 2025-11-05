@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "blogs/Convert an Image into Colourful Ascii Art.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Convert an Image into Colourful Ascii Art"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 203.5
+    "width": 204.5
   },
   "right": {
     "id": "1c09c19980dc3bef",
@@ -180,7 +180,7 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "757bdbda4ce8cd00",
+  "active": "f2481e8c86a80bd3",
   "lastOpenFiles": [
     "README.md",
     "Films.base",

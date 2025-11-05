@@ -14,13 +14,14 @@ div.projects {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+    max-width: 1000px;
     gap: 15px;
 }
 a.grid-item {
     width: calc(33.333% - 10px);
     max-width: 500px;
     min-width: 250px;     /* wrap if too narrow */
-    aspect-ratio: 4 / 3;             /* keep fixed ratio */
+    /*aspect-ratio: 4 / 3;             !* keep fixed ratio *!*/
     text-decoration: none;
     padding: 5px;
     border: 1px dashed var(--dark);
@@ -28,7 +29,7 @@ a.grid-item {
 }
 a.grid-item img{
     width: 100%;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 3 / 4;
     filter: grayscale(1);
 }
 p.project-title{
