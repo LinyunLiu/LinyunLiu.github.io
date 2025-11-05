@@ -14,6 +14,8 @@ link: auto
 active: "true"
 date: 2025-06-23
 ---
+![](assets/imgs/blog-2025-06-23-thumbnail.webp)
+
 # Introduction
 If you're a Mac user, have you ever found it inconvenient that there's no quick shortcut to export DOCX files to PDF? Imagine being able to select one or more Word documents, right-click, and instantly see an option to export them to PDF - no need to open each file individually. Just two clicks, and you're done. Simple, fast, and efficient. Wouldn’t that be a game-changer?
 
