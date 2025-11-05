@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#222222">
+    <meta name="author" content="Linyun Liu"/>
+    <meta name="description" content="How to use python to convert and print an image inside your terminal with colourful ascii characters"/>
+    <meta name="keywords" content="python, pillow, ascii, art"/>
+    <base href="https://linyunliu.com/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="mango.png">
+    <link rel="stylesheet" type="text/css" href="assets/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/blog-post.css"/>
+    <script src="assets/js/base.js" defer></script>
+    <script src="assets/js/blog-post.js" defer></script>
+    <title>Blog | Convert an Image into Colourful Ascii Art</title>
+</head>
+<body>
+<nav class="nav-bar" id="nav-bar">
+    <p class="nav-bar-title">P</p>
+    <a href="/">HOME</a>
+    <a href="/projects">PROJECT</a>
+    <a href="/films">FILM</a>
+    <a href="/blogs" class="active">BLOG</a>
+    <i class="bi bi-list" id="nav-list-btn" onclick="toggleNav(true)"></i>
+    <i class="bi bi-x-lg" id="nav-close-btn" onclick="toggleNav(false)"></i>
+</nav>
+<main>
+    <div class="blog-post">
+        <div class="blog-post-content">
+            <div class="blog-header">
+                <p class="blog-title">Convert an Image into Colourful Ascii Art</p>
+                <p class="blog-description">How to use python to convert and print an image inside your terminal with colourful ascii characters</p>
+                <div class="blog-keywords">
+                    <p>Computer Science</p>
+                    
+                        <p>#python</p>
+                    
+                        <p>#pillow</p>
+                    
+                        <p>#ascii</p>
+                    
+                        <p>#art</p>
+                    </div>
+                <p class="blog-date">9th June, 2025</p>
+            </div>
+            <br><br><br><br>
+            <p><img src="assets/imgs/blog-2025-06-10-thumbnail.webp" alt=""></p>
+<h1>Introduction</h1>
+<p>All the images we see on a screen are made up of tiny units called pixels. These pixels are usually so small that they&#39;re invisible to the human eye. But what if we could read each individual pixel and translate it into an ASCII character? By doing this, we can recreate an image in a unique, text-based style—where each character acts as a stand-in for a pixel. Of course, everything on screen is still rendered with RGB pixels in the end, but this transformation gives the image a distinctive and stylish look.</p>
+<h1>Prerequisites</h1>
+<ol>
+<li>We will be using Python for this project, you can install it by downloading the official installer from <a href="https://python.org/">https://python.org</a>, or alternatively, you can install it through the terminal, platform-specific instructions are widely available online.</li>
+<li>Create a project folder and open it with VS Code or your preferred code editor3. Initiate a virtual environment in your terminal (recommended). Run <code>python3 -m venv env</code> to add the environment, and then we can run <code>source env/bin/activate</code> to activate it. On windows, you need to type in <code>.\env\Scripts\activate</code> instead.4. Install python library <code>Pillow</code> and <code>Rich</code>. To install, run the commands <code>pip install pillow</code> and <code>pip install rich</code></li>
+</ol>
+<h1>The Libraries</h1>
+<h3>Pillow</h3>
+<p>Pillow is a Python library for image processing. It&#39;s a modern fork of the original PIL (Python Imaging Library), maintained and more feature-rich. And we can do a lot with this powerful library:</p>
+<ul>
+<li>Open and display images.</li>
+<li>Access and manipulate individual pixels (This is what we will be using)</li>
+<li>Convert between formats (e.g., PNG to JPEG).</li>
+<li>Resize, crop, rotate, flip, and filter images.</li>
+<li>Draw text or shapes on images.</li>
+<li>Apply effects like blur, contrast, sharpen.</li>
+</ul>
+<h3>Rich</h3>
+<p>A Python library for beautiful formatting in the terminal. It supports:</p>
+<ul>
+<li>Coloured text</li>
+<li>Progress bars</li>
+<li>Tables</li>
+<li>Markdown</li>
+<li>Syntax highlighting</li>
+<li>Tracebacks (better error display)</li>
+</ul>
+<blockquote>
+<p>Combine these two library we can make our idea come true, Let&#39;s get started!</p>
+</blockquote>
+<h1>Basic Idea</h1>
+<p>We use the Pillow library to read an image and extract the RGB values of each pixel. With this information, we can print ASCII characters in the corresponding colours to recreate the image. However, images typically contain hundreds or even thousands of pixels, making it impractical to render each one as a separate character. The terminal window, or even the entire screen, wouldn’t be large enough to display them all, and doing so would significantly impact performance. To address this, we <code>divide the image into a grid</code> (as shown below) and <code>use an ASCII character to represent each cell</code>, effectively compressing the visual data while preserving the overall structure.</p>
+<p><img src="assets/imgs/blog-2025-06-10-tulip-grid.webp" alt="An Image Of Tulips Divided Into Cells"></p>
+<p>As shown in the example image above (with enlarged grid squares for visual clarity), the main idea is to <code>calculate the average color of each square</code> and use that color for the ASCII character representing it. The concept is simple, but it does involve some basic yet slightly tricky math. As you might imagine, the final result will look “pixelated” — but that’s exactly what gives it its unique, stylish charm.</p>
+<h1>Create A Converter Class</h1>
+<p>Let’s start by creating a converter class. But before diving into the code, let’s clarify some key variables:</p>
+<ul>
+<li><strong>pixels</strong> — an array containing all the pixels of the image; each pixel represents an RGB value (Red, Green, Blue) accessible by index.</li>
+<li><strong>width, height</strong> — the dimensions of the image in pixels (for example, 1080p × 720p).</li>
+<li><strong>square_size</strong> — the width and height (in pixels) of each square in our grid, your decision</li>
+<li><strong>W</strong> — the number of squares across each row.</li>
+<li><strong>H</strong> — the number of squares down each column.</li>
+<li><strong>data</strong> — a 2D array used to temporarily store squares with each one containing all the pixels within that square.</li>
+<li><strong>new_data</strong> — used to store the average RGB color of each square, computed from the pixels in that square.</li>
+<li><strong>char</strong> - choose a character to for the final printing</li>
+</ul>
+<pre><code class="language-python">from PIL import Image
+from rich.console import Console 
+
+class AsciiArtConverter:
+    def __init__(self, image_path, square_size, char):
+        self.image = Image.open(image_path)
+        self.pixels = self.image.load() # Load the image into an array of pixels
+        self.width, self.height = self.image.size # Get the image size (width and height in pixels)
+        self.square_size = square_size
+        self.W = self.width // self.square_size
+        self.H = self.height // self.square_size
+        self.data = []
+        self.new_data = []
+        self.char = char
+
+	# This function reads all pixels of a square provided with a 
+	# starting X coordinate and a starting Y coordinate,
+	# and then we save that square to data[]
+    def read(self, x_start, y_start):
+        sq = []
+        y_end = y_start + self.square_size
+        x_end = x_start + self.square_size
+        for y in range(y_start, y_end):
+            for x in range(x_start, x_end):
+                sq.append(self.pixels[x, y])
+        self.data.append(sq)
+
+	# This function uses the read() function to read the entire image
+	# square by square, from left to right, top to bottom. W and H can be
+	# cleverly used for locating the starting X,Y coordinates of a square
+    def read_all(self):
+        for y in range(self.H):
+            for x in range(self.W):
+                self.read(x * self.square_size, y * self.square_size)
+
+	# This function processes all the pixels stored in data[] for each square
+	# and calculates the average color of the square.
+	# It does this by summing all the red, green, and blue values separately,
+	# then dividing each sum by the total number of pixels in the square.
+    def calculate(self):
+        for i in range(len(self.data)):
+            square = self.data[i]
+            red = green = blue = 0
+            for p in square:
+                red += p[0]
+                green += p[1]
+                blue += p[2]
+            new_val = (red // len(square), green // len(square), blue // len(square))
+            self.new_data.append(new_val)
+
+	# Finally, this function calls read_all() and calculate() to populate new_data[]
+	# with the average RGB values representing each square.
+	# Then, using these values, it prints colorful ASCII characters with the Rich library.
+	# A nested loop iterates through each square—column by column, row by row—to display the output.
+    def convert_to_ascii(self):
+        self.read_all()
+        self.calculate()
+        index = 0
+        console = Console()
+        for y in range(self.H):
+            for x in range(self.W):
+                r = self.new_data[index][0]
+                g = self.new_data[index][1]
+                b = self.new_data[index][2]
+                console.print(self.char, style=&quot;rgb({},{},{})&quot;.format(r, g, b), end=&quot;&quot;)
+                index += 1
+            print()
+</code></pre>
+<h1>Start Making Ascii Art</h1>
+<p>Now let’s import the converter class and start transforming an image into ASCII art. Keep in mind that the larger the image, the more time it will take to process — the time complexity is linear: <code>O(w × h)</code>, where <code>w</code> and <code>h</code> are the image width and height in pixels. We believe there’s a more efficient way to achieve the same result—one that uses less memory and fewer loops. However, for now, let’s stick with this algorithm, as it’s more straightforward.</p>
+<pre><code class="language-python">from ascii import AsciiArtConverter
+image_path = &#39;tunip.jpg&#39;
+square_size = 40 #40 pixels
+converter = AsciiArtConverter(image_path, square_size, &quot;@@&quot;)
+converter.convert_to_ascii()
+</code></pre>
+<p><img src="assets/imgs/blog-2025-06-10-tulip-converted.webp" alt="The Final Result"></p>
+<h1>Notes</h1>
+<ul>
+<li>Choose an appropriate <code>square_size</code>: Since image sizes vary widely—some images have only a few hundred pixels per row, while others have thousands—you should adjust the <code>square_size</code> accordingly to balance detail and performance.</li>
+<li>Why use double characters like &quot;@@&quot;?: Terminals typically print characters with some vertical spacing. If you use a single character, the output can appear vertically stretched. Doubling the character width helps maintain the correct aspect ratio. Keep in mind this behaviour may vary depending on your terminal.</li>
+<li>Handling character compatibility with <code>Rich</code>: If certain characters don’t render well with the <code>Rich</code> library, try using different characters until you find one that display properly.</li>
+</ul>
+
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer-minimize-btn"></div>
+    <div class="footer-content">
+        <div class="nav-logo">
+            <p class="footer-subtitle clock" id="clock">00:00:00</p>
+            <img alt="" src="mango.png"/>
+        </div>
+        <div class="nav-links">
+            <p class="footer-subtitle">LINKS</p>
+            <a href="/">HOME</a>
+            <a href="/projects">PROJECT</a>
+            <a href="/films">FILM</a>
+            <a href="/blogs">BLOG</a>
+        </div>
+        <div class="social-links">
+            <p class="footer-subtitle">Social</p>
+            <a href="https://github.com/LinyunLiu"><i class="bi bi-github"></i>&nbsp;&nbsp;GITHUB</a>
+            <a href="https://www.linkedin.com/in/linyun-liu-2a4b05240/"><i class="bi bi-linkedin"></i>&nbsp;&nbsp;LINKEDIN</a>
+            <a href="https://www.instagram.com/linyunliu42/"><i class="bi bi-instagram"></i>&nbsp;&nbsp;INSTAGRAM</a>
+            <a href="mailto:linyunliu574@gmail.com"><i class="bi bi-envelope-fill"></i>&nbsp;&nbsp;EMAIL</a>
+        </div>
+    </div>
+    <div class="footer-note">
+        <p>少しの勇気と想像力</p>
+    </div>
+    <p class="footer-name">LINYUN</p>
+</footer>
+</body>
+</html>

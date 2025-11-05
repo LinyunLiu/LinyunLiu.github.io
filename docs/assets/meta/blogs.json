@@ -1,5 +1,39 @@
 {
-  "items": [],
-  "total": 0,
+  "items": [
+    {
+      "title": "Convert Word Documents to PDF Instantly on Mac with Automator",
+      "description": "How to Quickly and Easily Convert DOCX Files to PDF on Your Mac Using a Custom Quick Action in Apple Automator",
+      "cover": "assets/imgs/blog-2025-06-23-thumbnail.webp",
+      "author": "Linyun Liu",
+      "keywords": [
+        "macos",
+        "docx",
+        "pdf",
+        "automation",
+        "apple-script"
+      ],
+      "topic": "Computer Science",
+      "date": "2025-06-23T00:00:00.000Z",
+      "active": true,
+      "link": "/blogs/convert-word-documents-to-pdf-instantly-on-mac-with-automator"
+    },
+    {
+      "title": "Convert an Image into Colourful Ascii Art",
+      "description": "How to use python to convert and print an image inside your terminal with colourful ascii characters",
+      "cover": "assets/imgs/blog-2025-06-10-thumbnail.webp",
+      "author": "Linyun Liu",
+      "keywords": [
+        "python",
+        "pillow",
+        "ascii",
+        "art"
+      ],
+      "topic": "Computer Science",
+      "date": "2025-06-10T00:00:00.000Z",
+      "active": true,
+      "link": "/blogs/convert-an-image-into-colourful-ascii-art"
+    }
+  ],
+  "total": 2,
   "limit_per_page": 6
 }
