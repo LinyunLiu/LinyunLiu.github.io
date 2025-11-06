@@ -32,22 +32,8 @@
       "date": "2025-06-10T00:00:00.000Z",
       "active": true,
       "link": "/blogs/convert-an-image-into-colourful-ascii-art"
-    },
-    {
-      "title": "This is a blog post",
-      "description": "this is only a test",
-      "cover": "https://cdn.wallpapersafari.com/63/56/izoh9I.jpg",
-      "author": "Linyun Liu",
-      "keywords": [
-        "ascii",
-        "python"
-      ],
-      "topic": "Computer Science",
-      "date": "2025-11-05T00:00:00.000Z",
-      "active": true,
-      "link": "/blogs/this-is-a-blog-post"
     }
   ],
-  "total": 3,
+  "total": 2,
   "limit_per_page": 6
 }
