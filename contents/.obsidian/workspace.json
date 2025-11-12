@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blogs/Convert Word Documents to PDF Instantly on Mac with Automator.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Convert Word Documents to PDF Instantly on Mac with Automator"
+              "title": "README"
             }
           }
         ]
@@ -182,12 +182,15 @@
   },
   "active": "a39476d4f2717582",
   "lastOpenFiles": [
-    "blogs/This is a blog post.md",
-    "blogs/Convert Word Documents to PDF Instantly on Mac with Automator.md",
     "blogs/Convert an Image into Colourful Ascii Art.md",
+    "films/The Gold.md",
+    "Films.base",
+    "films/Untitled.md",
+    "films/A Dancing Video.md",
+    "blogs/Convert Word Documents to PDF Instantly on Mac with Automator.md",
+    "blogs/This is a blog post.md",
     "Blogs.base",
     "Projects.base",
-    "Films.base",
     "assets/imgs/blog-cover-1.jpg.md",
     "assets/imgs/blog-2025-06-23-thumbnail.webp",
     "assets/imgs/blog-2025-06-23-add-applescript.webp",
@@ -214,13 +217,9 @@
     "projects/Autonomous Rover.md",
     "projects/iMessage ChatBot.md",
     "projects/AI Robot.md",
-    "films/A Dancing Video.md",
     "films/Good Will Hunting?.md",
     "films/We are Nerds.md",
-    "films/The Gold.md",
     "films/Police Body Camera.md",
-    "films/This Future of Mine.md",
-    "templates/Template.md",
     "templates",
     "流程图.canvas",
     "assets/imgs"
